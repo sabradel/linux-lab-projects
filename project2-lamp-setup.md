@@ -14,3 +14,17 @@ Install and configure a LAMP stack (Linux, Apache, MySQL, PHP) on an Ubuntu serv
 
 ## Outcome
 Successfully running LAMP stack and tested with a web page.
+
+---
+
+✅ LAMP Stack Setup - Progress Log  
+Project Name: LAMP Setup  
+VM Name: ubuntu-lab  
+Host Port: localhost:8080  
+
+### Apache Installation
+
+```bash
+sudo apt update
+sudo apt install apache2 -y
+

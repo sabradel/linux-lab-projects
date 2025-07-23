@@ -31,6 +31,9 @@ su - testuser
 sudo whoami
 
 
+## Screenshot of User Management Commands
+
+![User Management session showing creation and sudo verification](screenshots/your-pro.png)
 
 
 ---

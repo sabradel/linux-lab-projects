@@ -31,7 +31,7 @@ Immutable infrastructure improves:
 This project demonstrates a modern Linux infrastructure mindset aligned
 with cloud, DevOps, and SOC operational practices.
 
-# Project 7: Immutable Infrastructure on Linux
+---
 
 ## Step 1: Golden Image Creation
 
@@ -49,23 +49,25 @@ This image will never be modified after deployment.
 - Hypervisor: VirtualBox
 - Role: Golden Image (immutable)
 
+---
+
 ## Step 2: SSH and Network Policy (Immutable Design)
 
 ### SSH Policy
 - SSH is enabled only for:
   - Initial validation
-    - Controlled administrative access
-    - SSH is **not used for live troubleshooting**
-    - Root SSH login is disabled
-    - Administrative access is done via a non-root sudo user
+  - Controlled administrative access
+- SSH is **not used for live troubleshooting**
+- Root SSH login is disabled
+- Administrative access is done via a non-root sudo user
 
-    ### Network Policy
-    - Default-deny firewall posture
-    - Only required ports are allowed
-    - No ad-hoc port opening
-    - Firewall rules are defined once in the golden image
+### Network Policy
+- Default-deny firewall posture
+- Only required ports are allowed
+- No ad-hoc port opening
+- Firewall rules are defined once in the golden image
 
-    ### Immutable Rule
-    If SSH access, firewall rules, or network configuration need changes:
-    ➡️ The server is **rebuilt**, not fixed.
- 
+### Immutable Rule
+If SSH access, firewall rules, or network configuration need changes:
+➡️ The server is **rebuilt**, not fixed.
+

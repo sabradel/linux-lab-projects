@@ -126,3 +126,17 @@ Deploy multiple servers from the golden image without modifying them manually.
 ```bash
 VBoxManage clonevm "Golden-Image" --name "Immutable-Server-1" --register
 VBoxManage clonevm "Golden-Image" --name "Immutable-Server-2" --register
+
+
+---
+
+## Step 7: Simulate Failure and Replace a Server
+
+### Objective
+Demonstrate recovery and immutable workflow when a server fails.
+
+### Procedure
+1. Simulate a server failure (example: stop the VM):
+
+```bash
+VBoxManage controlvm "Immutable-Server-1" poweroff

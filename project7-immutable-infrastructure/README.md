@@ -91,3 +91,21 @@ The administrative user was created during image preparation:
 ```bash
 sudo adduser adelyahaya
 sudo usermod -aG sudo adelyahaya
+
+---
+
+## Step 5: Firewall and Base Service Hardening
+
+### Objective
+Harden the golden image by restricting network access and minimizing exposed services.
+
+### Firewall Configuration
+- Default-deny for all incoming connections
+- Only required ports are allowed
+- Example for enabling SSH temporarily during image preparation:
+
+```bash
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+sudo ufw enable

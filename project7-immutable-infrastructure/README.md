@@ -140,3 +140,33 @@ Demonstrate recovery and immutable workflow when a server fails.
 
 ```bash
 VBoxManage controlvm "Immutable-Server-1" poweroff
+
+
+---
+
+## Step 8: Summary, Best Practices, and Immutable Checklist
+
+### Summary
+This project demonstrates a fully immutable infrastructure workflow on Linux:
+- Golden image creation
+- User and SSH hardening
+- Firewall and base service hardening
+- Cloning immutable servers
+- Server replacement instead of live fixes
+
+### Best Practices
+- Always work from a **golden image**, never modify clones
+- Keep images **versioned** and **audit-ready**
+- Apply **minimal services** and **default-deny firewall**
+- Disable root SSH login and use non-root sudo users
+- Document all changes in Git for reproducibility
+
+### Immutable Checklist
+- [ ] Golden image created and hardened
+- [ ] Administrative users defined
+- [ ] SSH root login disabled
+- [ ] Firewall configured with default-deny posture
+- [ ] Base services minimized
+- [ ] Cloning procedure documented
+- [ ] Failure and replacement workflow documented
+- [ ] README updated and pushed to GitHub

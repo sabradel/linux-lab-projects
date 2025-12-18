@@ -31,3 +31,21 @@ Immutable infrastructure improves:
 This project demonstrates a modern Linux infrastructure mindset aligned
 with cloud, DevOps, and SOC operational practices.
 
+# Project 7: Immutable Infrastructure on Linux
+
+## Step 1: Golden Image Creation
+
+### Objective
+Create a hardened Ubuntu Server that will act as a **golden image**.
+This image will never be modified after deployment.
+
+### Principles Applied
+- No manual changes after deployment
+- All servers are replaceable
+- Configuration is reproducible and auditable
+
+### Base System
+- OS: Ubuntu Server 24.04 LTS
+- Hypervisor: VirtualBox
+- Role: Golden Image (immutable)
+

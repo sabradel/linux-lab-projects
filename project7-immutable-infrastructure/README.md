@@ -109,3 +109,20 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow ssh
 sudo ufw enable
+
+
+
+---
+
+## Step 6: Cloning Immutable Servers
+
+### Objective
+Deploy multiple servers from the golden image without modifying them manually.
+
+### Cloning Procedure (VirtualBox Example)
+1. Shutdown the golden image VM.
+2. Clone the VM using VirtualBox GUI or CLI:
+
+```bash
+VBoxManage clonevm "Golden-Image" --name "Immutable-Server-1" --register
+VBoxManage clonevm "Golden-Image" --name "Immutable-Server-2" --register

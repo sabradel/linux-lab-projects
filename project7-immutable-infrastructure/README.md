@@ -71,3 +71,23 @@ This image will never be modified after deployment.
 If SSH access, firewall rules, or network configuration need changes:
 ➡️ The server is **rebuilt**, not fixed.
 
+---
+
+## Step 4: User Management and SSH Hardening
+
+### Objective
+Define a secure administrative access model for the golden image.
+All access is controlled, auditable, and reproducible.
+
+### Administrative Users
+- A primary administrative user exists in the image
+- Root login is disabled for SSH
+- Privileged actions require sudo
+
+### User Creation (Golden Image Phase)
+
+The administrative user was created during image preparation:
+
+```bash
+sudo adduser adelyahaya
+sudo usermod -aG sudo adelyahaya

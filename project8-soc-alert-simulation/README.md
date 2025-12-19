@@ -155,3 +155,54 @@ This lab focuses on visibility, not prevention.
 No SSH configuration changes are made during analysis.
 If SSH policies require changes, the system is rebuilt from the golden image.
 
+
+## Step 5: Simulated Brute-Force Behavior and Log Pattern Recognition
+
+### Objective
+Simulate controlled brute-force-like SSH behavior and analyze how
+repeated authentication failures appear in system logs.
+This step builds the foundation for SOC alert detection logic.
+
+### SOC Relevance
+Brute-force attacks against SSH are one of the most common
+threats observed in SOC environments.
+
+SOC analysts look for:
+- High frequency failed login attempts
+- Repeated failures from a single source IP
+- Attempts against multiple usernames
+- Authentication failures without successful login
+
+### Attack Simulation (Controlled)
+The activity performed in this lab simulates attacker behavior
+without exploiting vulnerabilities or causing harm.
+This is strictly for detection and learning purposes.
+
+### Indicators of Brute-Force Activity
+Patterns that may indicate brute-force attempts:
+- Multiple "Failed password" entries within a short time window
+- Repeated attempts for the same or different users
+- Consistent source IP address
+- No corresponding successful login
+
+### Log Source
+Brute-force indicators are recorded in:
+- /var/log/auth.log
+
+### SOC Detection Logic
+A SOC analyst would typically:
+- Count failed authentication attempts
+- Correlate failures by source IP
+- Apply thresholds (e.g., >10 failures in 1 minute)
+- Escalate as a potential brute-force incident
+
+### Analyst Outcome
+This activity would be documented as:
+- Suspicious authentication behavior
+- Potential SSH brute-force attempt
+- Medium to high severity depending on frequency
+
+### Immutable Principle
+No defensive changes are applied during detection.
+Blocking or hardening actions require rebuilding the image.
+

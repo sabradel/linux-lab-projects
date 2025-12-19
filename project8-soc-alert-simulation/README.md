@@ -66,3 +66,44 @@ Bi-directional ICMP (ping) communication confirms:
 - Correct IP addressing
 - Proper lab isolation
 
+## Step 3: Logging Baseline on Ubuntu Server
+
+### Objective
+Establish a logging baseline on the target system so that security-relevant
+events can be observed, analyzed, and correlated.
+
+### Why Logging Matters in SOC
+Logs are the primary data source for SOC analysts.
+Without logs:
+- Attacks cannot be detected
+- Incidents cannot be reconstructed
+- Alerts have no context
+
+### Logging Scope
+This lab focuses on core Linux logs commonly monitored by SOC teams:
+- Authentication activity
+- User privilege changes
+- Network service events
+- System messages
+
+### Key Log Files
+- /var/log/auth.log
+  Records:
+    - SSH login attempts
+      - sudo usage
+        - Authentication failures and successes
+
+        - /var/log/syslog
+          Records:
+            - General system activity
+              - Service start/stop events
+                - Network-related messages
+
+                ### Baseline Principle
+                Before simulating attacks, a baseline of normal system behavior
+                must be understood. This allows abnormal activity to stand out.
+
+                ### Immutable Consideration
+                Logging configuration is defined once in the system build.
+                If logging requirements change, the server is rebuilt rather than modified live.
+                

@@ -219,3 +219,60 @@ SOC analysis requires flexible pattern matching across:
 
 Detection logic should focus on behavior patterns rather than exact strings.
 
+## Step 6: Alert Logic and SOC Incident Creation
+
+### Objective
+Translate observed SSH authentication patterns into a structured
+security alert and incident record, simulating real SOC workflows.
+
+### From Logs to Alerts
+Raw logs are not alerts.
+SOC teams define alert conditions based on behavior patterns
+observed over time.
+
+### Example Alert Logic
+An SSH brute-force alert may trigger when:
+- More than 5 failed authentication attempts
+- Occur within a short time window (e.g., 1–2 minutes)
+- Originate from the same source IP
+- Target one or more user accounts
+- Do not result in a successful login
+
+### Simulated Alert Trigger
+Based on observed journalctl logs:
+- Repeated authentication failures were detected
+- Attempts originated from a single internal IP
+- Multiple usernames were targeted
+- No successful authentication occurred during the window
+
+### Alert Severity
+Severity is determined by:
+- Frequency of attempts
+- Exposure of the service (internal vs external)
+- Privilege level of targeted accounts
+
+Assigned severity:
+- Medium (internal lab environment)
+- Would be High if externally exposed
+
+### SOC Incident Record (Simulated)
+
+Incident Type: SSH Brute-Force Attempt  
+Detection Source: Linux authentication logs (journald)  
+Affected Host: Ubuntu Server  
+Source IP: Internal lab IP (Kali Linux)  
+Status: Investigated  
+Impact: No successful compromise  
+Response: Monitoring only (immutable policy)  
+
+### Analyst Notes
+- Activity matches brute-force attack patterns
+- No evidence of credential compromise
+- No defensive action taken on live system
+- Hardening changes require image rebuild
+
+### Immutable Principle
+The system is not modified in response to detection.
+Security improvements are applied by rebuilding the golden image,
+not by changing the running server.
+

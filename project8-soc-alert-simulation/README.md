@@ -107,3 +107,51 @@ This lab focuses on core Linux logs commonly monitored by SOC teams:
                 Logging configuration is defined once in the system build.
                 If logging requirements change, the server is rebuilt rather than modified live.
                 
+
+
+## Step 4: SSH Authentication Visibility and Event Generation
+
+### Objective
+Generate controlled SSH authentication events and observe how they
+are recorded in system logs. This step teaches how SOC analysts
+differentiate between normal administrative access and suspicious activity.
+
+### SOC Relevance
+SSH is one of the most targeted services on Linux systems.
+SOC analysts routinely monitor SSH logs to detect:
+- Brute-force attempts
+- Unauthorized access
+- Credential abuse
+- Lateral movement
+
+### Normal vs Suspicious Behavior
+
+Normal behavior includes:
+- Successful SSH logins from known internal IPs
+- Occasional failed login followed by success
+- Use of non-root administrative accounts
+
+Suspicious behavior includes:
+- Repeated failed login attempts
+- Login attempts for non-existent users
+- Authentication attempts from unexpected IPs
+- Root login attempts
+
+### Log Source
+All SSH authentication activity is recorded in:
+- /var/log/auth.log
+
+### Event Types Observed
+- Successful SSH login
+- Failed SSH login
+- Invalid user attempts
+- sudo privilege usage after login
+
+### Detection Mindset
+SOC analysts do not stop attacks — they detect and report them.
+This lab focuses on visibility, not prevention.
+
+### Immutable Principle
+No SSH configuration changes are made during analysis.
+If SSH policies require changes, the system is rebuilt from the golden image.
+

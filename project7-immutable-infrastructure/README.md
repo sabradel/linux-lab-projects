@@ -172,50 +172,6 @@ This project demonstrates a fully immutable infrastructure workflow on Linux:
 - [ ] README updated and pushed to GitHub
 
 
----
-
-## Optional: Immutable Infrastructure Workflow Diagram
-
-Golden Image Creation and Deployment Workflow:
-
-
-  +--------------------+
-  |  Golden Image VM   |
-  |  (Hardened Ubuntu)|
-  +--------------------+
-            |
-    Clone multiple immutable servers
-            |
-  +--------------------+
-  | Immutable Server 1 |
-  | (No manual edits)  |
-  +--------------------+
-            |
-  +--------------------+
-  | Immutable Server 2 |
-  | (No manual edits)  |
-  +--------------------+
-            |
-   Simulate Failure?
-            |
-   +----------------+
-   | Replace Server |
-   | From Golden VM |
-   +----------------+
-
-
-
-### Notes
-
-- All clones are **identical** to the golden image  
-- Any change = **rebuild golden image → redeploy**  
-- No live patching or SSH tweaks
-
-
-
-
-
----
 
 ## Full Immutable Infrastructure Lab Flow
 

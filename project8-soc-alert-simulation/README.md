@@ -206,3 +206,16 @@ This activity would be documented as:
 No defensive changes are applied during detection.
 Blocking or hardening actions require rebuilding the image.
 
+
+### Detection Note
+Initial searches for exact "Failed password" strings may return no results
+due to variations in SSH logging formats on Ubuntu 24.04.
+
+SOC analysis requires flexible pattern matching across:
+- "failed"
+- "invalid user"
+- "authentication failure"
+- PAM-related messages
+
+Detection logic should focus on behavior patterns rather than exact strings.
+

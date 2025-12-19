@@ -34,3 +34,35 @@ By the end of this project, the system will:
 - Allow basic investigation using logs
 - Demonstrate SOC analyst thinking on Linux systems
 
+
+## Step 2: Network Architecture & Visibility
+
+### Network Design
+This lab uses a simple flat internal network to allow full visibility
+between systems while preventing exposure to the host or internet.
+
+### Network Layout
+- Network Type: VirtualBox Internal Network
+- Subnet: 192.168.56.0/24
+- Gateway: None (isolated lab)
+- DNS: Not required
+
+### System Roles and IP Addresses
+- Kali Linux (Attacker / Tester): 192.168.56.104
+- Ubuntu Server (Target / Monitored): 192.168.56.103
+
+### Communication Rules
+- Kali Linux can initiate traffic to Ubuntu Server
+- Ubuntu Server can respond to traffic
+- No external internet access is required for detection activities
+
+### SOC Visibility Principle
+Flat networks increase visibility and simplify log correlation.
+This allows analysts to focus on detection rather than routing issues.
+
+### Verification
+Bi-directional ICMP (ping) communication confirms:
+- Network connectivity
+- Correct IP addressing
+- Proper lab isolation
+

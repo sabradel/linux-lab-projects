@@ -291,3 +291,18 @@ Key skills demonstrated:
 This project reflects real-world SOC Tier 1 responsibilities
 and blue team operational thinking.
 
+## Project Summary
+
+This lab demonstrated a SOC analyst workflow using a Linux environment,
+from raw log collection to alert logic and incident documentation.
+
+Key skills demonstrated:
+- Linux authentication log analysis (journald)
+- Detection of brute-force behavior patterns
+- Alert threshold reasoning
+- Incident classification and documentation
+- Immutable infrastructure response discipline
+
+This project reflects real-world SOC Tier 1 responsibilities
+and blue team operational thinking.
+

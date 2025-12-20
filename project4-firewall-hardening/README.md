@@ -63,3 +63,15 @@ sudo ufw allow 443/tcp
 sudo ufw logging on
 sudo ufw enable
 sudo ufw status verbose
+
+
+---
+
+## 🧠 Skills Demonstrated
+
+- Linux firewall configuration using UFW
+- Network traffic filtering and access control
+- Attack surface reduction on Linux servers
+- Secure service exposure and port management
+- Understanding of inbound vs outbound traffic rules
+- Practical network security hardening techniques

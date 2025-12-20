@@ -153,3 +153,17 @@ Detection & Alert Analysis
        |
        v
 SOC Response Recommendation
+
+
+
+---
+
+## 🧠 Skills Demonstrated
+
+- Linux log analysis and event correlation
+- SOC-style detection of suspicious activity
+- Investigation of authentication and system logs
+- Identifying indicators of compromise (IOCs)
+- Analytical thinking and incident investigation workflow
+- Blue-team mindset and defensive security operations
+

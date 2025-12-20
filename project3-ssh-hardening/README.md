@@ -10,3 +10,13 @@
 ```bash
 sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 
+---
+
+## 🧠 Skills Demonstrated
+
+- Linux server hardening and secure remote access
+- SSH configuration and access control
+- Public key authentication management
+- Mitigation of brute-force and unauthorized login attempts
+- System configuration backup and rollback practices
+- Security best practices aligned with real-world Linux administration

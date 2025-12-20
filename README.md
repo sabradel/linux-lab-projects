@@ -60,8 +60,8 @@ Each project is self-contained and includes:
                                                 ---
 
                                                 ## ⚡ Notes
+                                                 How to Explore
                                                 - Each project is **self-contained**: clone the repo and navigate to a project folder to start.
                                                 - Commands and steps are documented for **reproducibility**.
                                                 - Screenshots are provided only for key steps to keep documentation clear.
                                                 
-                                                How to Explore

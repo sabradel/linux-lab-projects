@@ -1,5 +1,17 @@
 # Project 9: Log Correlation & Detection
 
+### Professional Summary
+This project demonstrates foundational SOC skills by simulating authentication events on a Linux server and analyzing them from an attacker/analyst perspective using Kali Linux. 
+
+It highlights:
+- Event generation (failed logins, invalid users, privilege escalation)
+- Correlation and detection techniques
+- SOC-style alert creation and response decision-making
+- Log investigation using Linux command-line tools
+
+The project provides hands-on experience relevant to SOC analyst and cybersecurity roles, emphasizing **detection, incident response, and documentation**.
+
+
 ## Objective
 Demonstrate basic log correlation and detection techniques using Linux systems,
 simulating real-world authentication events commonly monitored by Security
@@ -119,3 +131,25 @@ A SOC analyst would typically:
 ### SOC Value
 This process demonstrates detection-to-response thinking, a core skill
 for Security Operations Center roles.
+
+
+### Key Skills Demonstrated
+- Linux system administration
+- Log correlation and event analysis
+- SOC alert generation and severity assessment
+- Command-line log investigation (`journalctl`, `grep`, `awk`, `wc`)
+- Incident response planning and documentation
+
+
+### Optional: Event Correlation Workflow Diagram
+
+Ubuntu Server → Logs Generated
+       |
+       v
+Event Collection (journalctl / syslog)
+       |
+       v
+Detection & Alert Analysis
+       |
+       v
+SOC Response Recommendation

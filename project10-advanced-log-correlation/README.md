@@ -75,3 +75,35 @@ This activity pattern may indicate:
 - Validate affected user accounts
 - Confirm legitimacy of sudo activity
 - Monitor for additional suspicious behavior
+
+
+## Step 5: Incident Summary (SOC Perspective)
+
+### Incident Title
+Suspicious Authentication Activity with Privilege Escalation
+
+### Incident Description
+The Ubuntu server generated multiple authentication-related security
+events, including invalid user login attempts and failed password
+entries. Shortly after these failures, a successful sudo privilege
+escalation was observed.
+
+### Timeline Summary
+- Multiple failed login attempts detected
+- Invalid user authentication attempts recorded
+- Successful sudo access achieved by a valid user
+
+### Impact Assessment
+No confirmed system compromise was detected. However, the activity
+pattern suggests potential credential abuse or unauthorized access
+attempts.
+
+### Actions Taken
+- Authentication logs reviewed
+- Event correlation performed
+- System integrity verified
+
+### Recommended Next Steps
+- Continue monitoring authentication activity
+- Enforce stronger authentication controls
+- Review user access privileges

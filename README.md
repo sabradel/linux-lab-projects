@@ -8,16 +8,16 @@ Welcome! This repository contains step-by-step Linux system administration, cybe
 - Outcomes and skills demonstrated
 
 ## 📂 Projects
-- Project 1: User Management
-- Project 2: LAMP Stack Setup
-- Project 3: SSH Hardening
-- Project 4: Firewall Hardening
-- Project 5: System Monitoring
-- Project 6: Backup Automation
-- Project 7: Immutable Infrastructure
-- Project 8: SOC Alert Simulation
-- Project 9: Log Correlation & Detection
-- Project 10: Advanced SOC Wrap-Up
+- [Project 1: User Management](project1-user-management/)
+- [Project 2: LAMP Stack Setup](project2-lamp-setup/)
+- [Project 3: SSH Hardening](project3-ssh-hardening/)
+- [Project 4: Firewall Hardening](project4-firewall-hardening/)
+- [Project 5: System Monitoring](project5-system-monitoring/)
+- [Project 6: Backup Automation](project6-backup-cron/)
+- [Project 7: Immutable Infrastructure](project7-immutable-infrastructure/)
+- [Project 8: SOC Alert Simulation](project8-soc-alert-simulation/)
+- [Project 9: Log Correlation & Detection](project9-log-correlation-detection/)
+- [Project 10: Advanced SOC Wrap-Up](project10-advanced-log-correlation/)
 
 ## ⚡ Key Skills Highlighted
 - Linux server administration
@@ -29,4 +29,11 @@ Welcome! This repository contains step-by-step Linux system administration, cybe
 - Git & GitHub version control
 
 ## 📌 Notes
-Clone the repo, navigate to any project folder, and follow the instructions in its `README.md`.
+Clone the repo, navigate to any project folder, and follow the instructions in its `README.md`.  
+Each project folder is self-contained and includes commands, configuration examples, and screenshots where relevant.
+
+---
+
+About: linux, system-administration, cybersecurity, projects, shell, bash, monitoring, ufw, ssh  
+Step-by-step Linux system administration labs with screenshots.
+

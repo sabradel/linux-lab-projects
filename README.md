@@ -2,6 +2,24 @@
 
 Welcome! This repository contains step-by-step Linux system administration, cybersecurity, and SOC/blue team labs.
 
+## 🔥 Featured Resume Projects (Start Here)
+
+These projects best demonstrate hands-on Linux system administration and SOC/blue-team skills.  
+Recruiters and reviewers are encouraged to start here:
+
+- **Project 3: SSH Hardening**  
+  Hardened SSH access by disabling root login, enforcing key-based authentication, and mitigating brute-force attacks.  
+  👉 [View Project](project3-ssh-hardening/)
+
+- **Project 4: Firewall Hardening**  
+  Implemented UFW firewall rules to restrict network access and reduce attack surface on Linux servers.  
+  👉 [View Project](project4-firewall-hardening/)
+
+- **Project 9: Log Correlation & Detection**  
+  Performed Linux log analysis and correlation to detect suspicious activity in a SOC-style investigation.  
+  👉 [View Project](project9-log-correlation-detection/)
+
+
 ## 💡 What You’ll Find
 - Self-contained projects with objectives and instructions
 - Commands, configuration examples, and screenshots for key steps

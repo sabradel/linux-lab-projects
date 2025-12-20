@@ -1,29 +1,20 @@
 # Project 6: Backup Automation
 
 ## Objective
-Demonstrate automated backup processes on Ubuntu Server using cron jobs and shell scripting.
+Demonstrate automated backup procedures on an Ubuntu Server using cron jobs.
 
 ## Lab Overview
-- Create automated backup scripts
-- Schedule scripts with cron
-- Verify integrity of backup files
-- Track backup history with timestamped filenames
+- Ubuntu Server generates backups automatically.
+- Backups are timestamped for auditing and recovery.
+- Scripts handle backup creation, verification, and rotation.
 
-## Technology Used
-- Ubuntu Server 24.04 LTS
-- Bash scripting
-- Cron scheduling
+## Folder Structure
+- `backups/` — contains all backup archive files.
+- Backup files are named with timestamps for easy tracking.
 
-## Key Steps
-1. Write a backup script to archive important files or directories.
-2. Schedule the script using cron for daily or periodic execution.
-3. Test the backup script to ensure it works correctly.
-4. Verify the contents of the generated backup files.
+## Skills Practiced
+- Cron job scheduling
+- Shell scripting
+- File backup and restoration
+- Audit and version control for backups
 
-## Outcome
-- Understand automation with cron jobs
-- Generate repeatable and timestamped backups
-- Improve reliability and auditability of Linux server data
-
-## Optional: Backups Folder
-All generated backup files are stored in `backups/` for tracking and validation.

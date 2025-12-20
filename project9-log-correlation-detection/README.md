@@ -15,3 +15,37 @@ Demonstrate basic log correlation and detection techniques using Linux servers a
 - Linux command-line tools (`journalctl`, `grep`, `awk`, `wc`)
 - Optional: Syslog configuration for log forwarding
 
+## Step 2: Authentication Event Simulation
+
+### Objective
+Simulate common authentication events to generate realistic security logs
+for SOC-style detection and analysis.
+
+### Events Generated
+The following authentication-related events were intentionally created
+on the Ubuntu server:
+
+- Invalid user login attempt
+- Failed password attempts for a valid user
+- Successful privilege escalation using sudo
+
+### Why This Matters (SOC Perspective)
+These events are commonly monitored in Security Operations Centers to detect:
+- Brute-force attacks
+- Unauthorized access attempts
+- Privilege escalation activity
+- Insider threat behavior
+
+### Log Sources
+Authentication events are recorded in:
+- systemd journal
+- SSH authentication logs
+- sudo command audit trails
+
+### Detection Value
+Repeated failed logins followed by a successful privilege escalation may
+indicate:
+- Credential guessing
+- Compromised user credentials
+- Lateral movement preparation
+

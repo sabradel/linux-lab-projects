@@ -44,3 +44,34 @@ The following security-relevant events were identified on the Ubuntu server:
 journalctl | grep -i "failed password"
 journalctl | grep -i "invalid user"
 journalctl | grep -i "sudo"
+
+
+## Step 4: Detection Logic and Alert Criteria
+
+### Objective
+Define detection logic that converts authentication logs into actionable
+security alerts from a SOC Tier 1 perspective.
+
+### Detection Conditions
+An alert would be triggered if the following conditions are observed
+within a short time window:
+
+- Multiple failed authentication attempts for one or more users
+- Login attempts using non-existent user accounts
+- A successful sudo privilege escalation following failed logins
+
+### Alert Severity
+- Severity Level: Medium
+- Escalation Required: Yes (Tier 2 review)
+
+### Alert Rationale
+This activity pattern may indicate:
+- Brute-force or credential-guessing attempts
+- Account compromise
+- Unauthorized privilege escalation
+
+### SOC Response Recommendation
+- Review source IP addresses
+- Validate affected user accounts
+- Confirm legitimacy of sudo activity
+- Monitor for additional suspicious behavior

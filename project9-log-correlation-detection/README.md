@@ -86,3 +86,36 @@ By correlating these events, a SOC analyst can:
 - Quickly spot compromised accounts
 - Determine attack patterns
 - Prioritize incidents for further investigation
+
+---
+
+## Step 5: Simulated SOC Alerting & Response
+
+### Objective
+Simulate how a SOC analyst would generate alerts and determine response
+actions based on correlated authentication events.
+
+### Alert Conditions
+An alert would be triggered when the following conditions are observed:
+
+- Multiple failed authentication attempts
+- Invalid user login activity
+- Successful privilege escalation after failures
+
+### Alert Severity
+**Medium to High**
+
+The presence of repeated failures followed by successful sudo access
+suggests potential credential compromise.
+
+### Analyst Response Actions
+A SOC analyst would typically:
+
+- Flag the affected user account
+- Review source IP reputation
+- Recommend password reset or account lockout
+- Escalate to Tier 2 for further investigation if needed
+
+### SOC Value
+This process demonstrates detection-to-response thinking, a core skill
+for Security Operations Center roles.

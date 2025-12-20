@@ -107,3 +107,24 @@ attempts.
 - Continue monitoring authentication activity
 - Enforce stronger authentication controls
 - Review user access privileges
+
+
+## Project Outcome and Skills Demonstrated
+
+This project demonstrates hands-on SOC-style log analysis and incident
+handling using native Linux tools.
+
+### Skills Demonstrated
+- Authentication log analysis using journalctl and auth logs
+- Detection of suspicious login and privilege escalation activity
+- Correlation of multiple security events into a single incident
+- SOC-style incident documentation and reporting
+- Linux security monitoring fundamentals
+
+### SOC Relevance
+The activity simulated in this project mirrors real-world Tier 1 SOC
+alerts related to brute-force attempts, unauthorized access, and
+privilege escalation.
+
+This project demonstrates the ability to move beyond command execution
+and into security analysis, investigation, and communication.

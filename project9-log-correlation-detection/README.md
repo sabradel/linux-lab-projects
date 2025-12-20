@@ -59,3 +59,30 @@ escalation may indicate:
 - Compromised user accounts
 - Preparation for lateral movement
 
+---
+
+## Step 4: Detection Logic & Analyst Interpretation
+
+### Objective
+Analyze authentication logs using Linux command-line tools to detect
+suspicious activity patterns and correlate them to potential security
+incidents.
+
+### Detection Techniques
+- Count failed logins by user and by source IP
+- Identify invalid user login attempts
+- Detect privilege escalation events following authentication failures
+
+### Sample Findings
+- Multiple failed login attempts from the same IP could indicate a
+  brute-force attack
+- Invalid user attempts suggest scanning or reconnaissance activity
+- Successful `sudo` usage after multiple failures may indicate
+  credential compromise
+
+### SOC Analyst Insight
+By correlating these events, a SOC analyst can:
+
+- Quickly spot compromised accounts
+- Determine attack patterns
+- Prioritize incidents for further investigation

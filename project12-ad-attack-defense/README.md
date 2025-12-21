@@ -100,3 +100,6 @@ used to detect and respond to real-world domain attacks.
 
 Part of the Linux & Security Lab Projects repository:
 https://github.com/sabradel/linux-lab-projects
+
+
+Verified full network connectivity between Kali Linux, Windows 10, and Windows Server 2016 using ICMP after configuring Windows Defender Firewall inbound rules in a controlled lab environment.

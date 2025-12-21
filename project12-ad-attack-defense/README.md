@@ -103,3 +103,14 @@ https://github.com/sabradel/linux-lab-projects
 
 
 Verified full network connectivity between Kali Linux, Windows 10, and Windows Server 2016 using ICMP after configuring Windows Defender Firewall inbound rules in a controlled lab environment.
+
+
+### RPC Enumeration Outcome
+
+A null RPC session was attempted from the attacker system.
+The Domain Controller immediately reset the connection,
+demonstrating proper hardening against anonymous RPC access.
+
+This behavior is expected in secured Active Directory environments
+and still produces authentication and network security events
+useful for SOC detection and investigation.

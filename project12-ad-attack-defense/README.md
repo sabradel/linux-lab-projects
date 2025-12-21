@@ -54,6 +54,20 @@ All actions were performed in a **controlled lab** for learning and defense.
 - Investigated Kerberos-related security events
 - Correlated attacker activity across systems
 
+### Confirmed Detection Evidence
+
+Windows Security Event logs confirmed detection of attacker activity.
+
+Event ID 4625 (Audit Failure) recorded:
+- Source Workstation: KALI
+- Source IP Address: 192.168.56.104
+- Authentication Process: NTLM (NtLmSsp)
+
+This confirms that domain authentication attempts originating
+from the attacker machine were successfully logged and
+correlated by the Domain Controller.
+
+
 ---
 
 ## 🔐 Defensive Hardening Actions

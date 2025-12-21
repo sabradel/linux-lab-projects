@@ -67,6 +67,24 @@ This confirms that domain authentication attempts originating
 from the attacker machine were successfully logged and
 correlated by the Domain Controller.
 
+### Successful Authentication Detection
+
+A controlled password spray attempt was performed using a known domain user.
+
+Attack result:
+- Account: jdoe
+- Authentication method: SMB
+- Outcome: Successful login
+
+Detection evidence on DC01:
+- Event ID: 4624 (Successful Logon)
+- Logon Type: 3 (Network)
+- Source IP: 192.168.56.104 (Kali attacker)
+- Domain: HERZINGCOLLEGE
+
+This confirms that Active Directory authentication events
+can be correlated back to attacker infrastructure during
+credential-based attacks.
 
 ---
 

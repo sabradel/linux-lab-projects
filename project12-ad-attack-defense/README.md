@@ -146,3 +146,19 @@ demonstrating proper hardening against anonymous RPC access.
 This behavior is expected in secured Active Directory environments
 and still produces authentication and network security events
 useful for SOC detection and investigation.
+
+
+## 🧾 SOC Evidence
+
+The following evidence was collected during the attack simulation and investigation phase:
+
+- **SOC_Project12_FailedLogon.png**
+  - Windows Security Event ID **4625**
+  - Failed NTLM authentication attempt originating from Kali Linux
+  - Source IP: 192.168.56.104
+
+- **SOC_Project12_AccountLockout.png**
+  - Windows Security Event ID **4740**
+  - Domain user account locked due to repeated authentication failures
+  - Lockout policy successfully enforced
+

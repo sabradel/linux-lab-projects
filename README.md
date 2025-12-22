@@ -36,7 +36,10 @@ Recruiters and reviewers are encouraged to start here:
 - [Project 8: SOC Alert Simulation](project8-soc-alert-simulation/)
 - [Project 9: Log Correlation & Detection](project9-log-correlation-detection/)
 - [Project 10: Advanced SOC Wrap-Up](project10-advanced-log-correlation/)
-- Project 11: Linux Incident Response & Threat Investigation
+- [Project 11: Linux Incident Response & Threat Investigation](project11-linux-incident-response)
+- [Project 12: Windows Active Directory Attack & Defense](project12-ad-attack-defense)
+
+
 
 ## ⚡ Key Skills Highlighted
 - Linux server administration

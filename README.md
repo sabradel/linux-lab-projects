@@ -19,6 +19,11 @@ Recruiters and reviewers are encouraged to start here:
   Performed Linux log analysis and correlation to detect suspicious activity in a SOC-style investigation.  
   👉 [View Project](project9-log-correlation-detection/)
 
+- **Project 13: Suricata IDS – Detection & Alert Tuning**
+  Built a SOC lab using Suricata IDS, authored custom detection rules, validated alerts, and tuned noisy signatures.
+  👉 [View Project](project13-suricata-ids-detection/)
+
+
 
 ## 💡 What You’ll Find
 - Self-contained projects with objectives and instructions
@@ -38,6 +43,7 @@ Recruiters and reviewers are encouraged to start here:
 - [Project 10: Advanced SOC Wrap-Up](project10-advanced-log-correlation/)
 - [Project 11: Linux Incident Response & Threat Investigation](project11-linux-incident-response)
 - [Project 12: Windows Active Directory Attack & Defense](project12-ad-attack-defense)
+- [Project 13: Suricata IDS – Detection & Alert Tuning](project13-suricata-ids-detection/)
 
 
 

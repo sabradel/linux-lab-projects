@@ -1,0 +1,10 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (
+    msg:"SOC LAB: Cleartext credential keyword detected";
+    flow:established,to_server;
+    http.request_body;
+    content:"password=";
+    nocase;
+    classtype:policy-violation;
+    sid:1000001;
+    rev:1;
+)

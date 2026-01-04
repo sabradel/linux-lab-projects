@@ -23,6 +23,11 @@ Recruiters and reviewers are encouraged to start here:
   Built a SOC lab using Suricata IDS, authored custom detection rules, validated alerts, and tuned noisy signatures.
   👉 [View Project](project13-suricata-ids-detection/)
 
+- **Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)**
+  Built a SOC lab using Wazuh SIEM to detect and investigate authentication attacks across Windows and Linux endpoints. Validated alerts, reviewed evidence in Discover, and mapped detections to MITRE ATT&CK (T1110).
+  👉 [View Project](project14-wazuh-authentication-incident/)
+
+
 
 
 ## 💡 What You’ll Find
@@ -44,6 +49,7 @@ Recruiters and reviewers are encouraged to start here:
 - [Project 11: Linux Incident Response & Threat Investigation](project11-linux-incident-response)
 - [Project 12: Windows Active Directory Attack & Defense](project12-ad-attack-defense)
 - [Project 13: Suricata IDS – Detection & Alert Tuning](project13-suricata-ids-detection/)
+- [Project 14: Wazuh SIEM – Authentication Attack Detection](Windows + Linux)
 
 
 

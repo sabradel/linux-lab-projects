@@ -7,25 +7,22 @@ Welcome! This repository contains step-by-step Linux system administration, cybe
 These projects best demonstrate hands-on Linux system administration and SOC/blue-team skills.  
 Recruiters and reviewers are encouraged to start here:
 
-- **Project 3: SSH Hardening**  
-  Hardened SSH access by disabling root login, enforcing key-based authentication, and mitigating brute-force attacks.  
-  👉 [View Project](project3-ssh-hardening/)
+🔥 Featured Resume Projects (Start Here)
 
-- **Project 4: Firewall Hardening**  
-  Implemented UFW firewall rules to restrict network access and reduce attack surface on Linux servers.  
-  👉 [View Project](project4-firewall-hardening/)
+These projects best demonstrate hands-on SOC / Blue Team and detection skills.
+Recruiters are encouraged to start here:
 
-- **Project 9: Log Correlation & Detection**  
-  Performed Linux log analysis and correlation to detect suspicious activity in a SOC-style investigation.  
-  👉 [View Project](project9-log-correlation-detection/)
+- **Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)**  
+  Built a SOC lab using Wazuh SIEM to detect and investigate authentication attacks across Windows and Linux endpoints.  
+  👉 [View Project](project14-wazuh-authentication-incident)
 
-- **Project 13: Suricata IDS – Detection & Alert Tuning**
-  Built a SOC lab using Suricata IDS, authored custom detection rules, validated alerts, and tuned noisy signatures.
-  👉 [View Project](project13-suricata-ids-detection/)
+- **Project 13: Suricata IDS – Detection & Alert Tuning**  
+  Built a SOC lab using Suricata IDS, authored custom detection rules, validated alerts, and tuned noisy signatures.  
+  👉 [View Project](project13-suricata-ids-detection)
 
-- **Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)**
-  Built a SOC lab using Wazuh SIEM to detect and investigate authentication attacks across Windows and Linux endpoints. Validated alerts, reviewed evidence in Discover, and mapped detections to MITRE ATT&CK (T1110).
-  👉 [View Project](project14-wazuh-authentication-incident/)
+- **Project 12: Windows Active Directory Attack & Defense**  
+  Simulated AD attacks, analyzed failed logons and account lockouts (Event IDs 4625, 4740), and documented detection evidence.  
+  👉 [View Project](project12-ad-attack-defense)
 
 
 
@@ -49,7 +46,7 @@ Recruiters and reviewers are encouraged to start here:
 - [Project 11: Linux Incident Response & Threat Investigation](project11-linux-incident-response)
 - [Project 12: Windows Active Directory Attack & Defense](project12-ad-attack-defense)
 - [Project 13: Suricata IDS – Detection & Alert Tuning](project13-suricata-ids-detection/)
-- [Project 14: Wazuh SIEM – Authentication Attack Detection](Windows + Linux)
+- [Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)](project14-wazuh-authentication-incident)
 
 
 

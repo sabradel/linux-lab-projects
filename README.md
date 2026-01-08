@@ -36,15 +36,15 @@ Recruiters are encouraged to start here:
 - Outcomes and skills demonstrated
 
 ## 📂 Projects
-- [Project 1: User Management](project1-user-management/)
+- [Project 1: User Management](project01-user-management/)
 - [Project 2: LAMP Stack Setup](project2-lamp-setup/)
-- [Project 3: SSH Hardening](project3-ssh-hardening/)
-- [Project 4: Firewall Hardening](project4-firewall-hardening/)
-- [Project 5: System Monitoring](project5-system-monitoring/)
-- [Project 6: Backup Automation](project6-backup-cron/)
-- [Project 7: Immutable Infrastructure](project7-immutable-infrastructure/)
-- [Project 8: SOC Alert Simulation](project8-soc-alert-simulation/)
-- [Project 9: Log Correlation & Detection](project9-log-correlation-detection/)
+- [Project 3: SSH Hardening](project03-ssh-hardening/)
+- [Project 4: Firewall Hardening](project04-firewall-hardening/)
+- [Project 5: System Monitoring](project05-system-monitoring/)
+- [Project 6: Backup Automation](project06-backup-cron/)
+- [Project 7: Immutable Infrastructure](project07-immutable-infrastructure/)
+- [Project 8: SOC Alert Simulation](project08-soc-alert-simulation/)
+- [Project 9: Log Correlation & Detection](project09-log-correlation-detection/)
 - [Project 10: Advanced SOC Wrap-Up](project10-advanced-log-correlation/)
 - [Project 11: Linux Incident Response & Threat Investigation](project11-linux-incident-response)
 - [Project 12: Windows Active Directory Attack & Defense](project12-ad-attack-defense)

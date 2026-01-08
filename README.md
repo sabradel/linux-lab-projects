@@ -24,6 +24,9 @@ Recruiters are encouraged to start here:
   Simulated AD attacks, analyzed failed logons and account lockouts (Event IDs 4625, 4740), and documented detection evidence.  
   👉 [View Project](project12-ad-attack-defense)
 
+- **Project 15: OpenVPN Remote Access VPN**
+  Secure remote access VPN server and client using certificates and encrypted tunnel.
+  📁 [View Project](project15-openvpn-remote-access/)
 
 
 
@@ -47,6 +50,7 @@ Recruiters are encouraged to start here:
 - [Project 12: Windows Active Directory Attack & Defense](project12-ad-attack-defense)
 - [Project 13: Suricata IDS – Detection & Alert Tuning](project13-suricata-ids-detection/)
 - [Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)](project14-wazuh-authentication-incident)
+- [Project 15: OpenVPN Remote Access VPN](project15-openvpn-remote-access/)
 
 
 

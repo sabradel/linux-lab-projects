@@ -34,5 +34,36 @@ Screenshots in this project show:
 - Expanded Windows 4625 authentication failure events
 - Active agent status for linux01 and windows10
 
+## 🔥 Live Attack Simulation: SSH Brute Force (Hydra)
+
+To validate real-world detection capability, a live SSH brute-force attack was executed from a Kali Linux attacker machine using `hydra` against the Debian Linux endpoint.
+
+### Attack Method
+- Tool: `hydra`
+- Target: SSH service on Linux endpoint
+- Technique: Password Guessing (MITRE ATT&CK T1110.001)
+- Source IP: Attacker Kali VM
+- Target User: root
+
+### Evidence Collected
+
+1. **Live brute-force attack and SSH failure logs**
+![Hydra Brute Force](screenshots/05-hydra-bruteforce-and-ssh-logs.png)
+
+2. **Wazuh detection and correlation dashboard**
+![Wazuh Detection](screenshots/06-wazuh-detection-dashboard.png)
+
+### Result
+
+- Wazuh successfully detected:
+  - Repeated SSH authentication failures
+  - Brute-force behavior
+  - Mapped activity to **MITRE ATT&CK T1110 (Credential Access)**
+- Alerts were correlated and visible in the Wazuh dashboard in real time.
+
+This confirms the SOC pipeline is functioning correctly:
+Attack → Log → Agent → Manager → SIEM → Alert → Analyst Investigation
+
+
 ## Outcome
 The activity was classified as an authentication attack attempt. No successful compromise was detected.

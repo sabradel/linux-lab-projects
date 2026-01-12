@@ -28,6 +28,9 @@ Recruiters are encouraged to start here:
   Secure remote access VPN server and client using certificates and encrypted tunnel.
   📁 [View Project](project15-openvpn-remote-access/)
 
+- **Project 16: SOC Investigation – SSH Brute Force Attack**
+  Investigated a real SSH brute-force attempt (Hydra) detected by Wazuh SIEM; validated logs and documented response steps.
+  📁 [View Project](project16-soc-ssh-bruteforce-investigation/)
 
 
 ## 💡 What You’ll Find
@@ -51,6 +54,8 @@ Recruiters are encouraged to start here:
 - [Project 13: Suricata IDS – Detection & Alert Tuning](project13-suricata-ids-detection/)
 - [Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)](project14-wazuh-authentication-incident)
 - [Project 15: OpenVPN Remote Access VPN](project15-openvpn-remote-access/)
+- [Project 16: SOC Investigation – SSH Brute Force Attack](project16-soc-ssh-bruteforce-investigation/)
+
 
 
 

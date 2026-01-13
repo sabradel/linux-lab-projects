@@ -32,6 +32,10 @@ Recruiters are encouraged to start here:
   Investigated a real SSH brute-force attempt (Hydra) detected by Wazuh SIEM; validated logs and documented response steps.
   📁 [View Project](project16-soc-ssh-bruteforce-investigation/)
 
+- **Project 17: SOC Alert Triage & Case Management**  
+  Demonstrated full SOC workflow: triage, investigation, classification, severity assignment, and case documentation across Linux and Windows using Wazuh SIEM.  
+  📁 [View Project](project17-soc-alert-triage-case-management/)
+
 
 ## 💡 What You’ll Find
 - Self-contained projects with objectives and instructions
@@ -55,6 +59,7 @@ Recruiters are encouraged to start here:
 - [Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)](project14-wazuh-authentication-incident)
 - [Project 15: OpenVPN Remote Access VPN](project15-openvpn-remote-access/)
 - [Project 16: SOC Investigation – SSH Brute Force Attack](project16-soc-ssh-bruteforce-investigation/)
+- [Project 17: SOC Alert Triage & Case Management](project17-soc-alert-triage-case-management/)
 
 
 

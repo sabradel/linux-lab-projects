@@ -78,7 +78,8 @@ Demonstrate a SOC analyst workflow by triaging, investigating, classifying, and 
 - Severity: Low
 - Action: No escalation
 
-(Screenshot here)
+![Windows Failed Logons](screenshots/08-windows-alert-4625-details.png)
+
 
 ---
 

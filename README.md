@@ -12,6 +12,10 @@ Recruiters and reviewers are encouraged to start here:
 These projects best demonstrate hands-on SOC / Blue Team and detection skills.
 Recruiters are encouraged to start here:
 
+**Project 18: Windows Malware Detection & SOC Investigation (Wazuh + Defender)**  
+Built a SOC investigation lab where Windows Defender detects malware (EICAR test file) and Wazuh collects, correlates, and visualizes the security events in the SIEM dashboard.  
+[View Project](project18-windows-malware-detection)
+
 - **Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)**  
   Built a SOC lab using Wazuh SIEM to detect and investigate authentication attacks across Windows and Linux endpoints.  
   👉 [View Project](project14-wazuh-authentication-incident)
@@ -60,6 +64,7 @@ Recruiters are encouraged to start here:
 - [Project 15: OpenVPN Remote Access VPN](project15-openvpn-remote-access/)
 - [Project 16: SOC Investigation – SSH Brute Force Attack](project16-soc-ssh-bruteforce-investigation/)
 - [Project 17: SOC Alert Triage & Case Management](project17-soc-alert-triage-case-management/)
+- [Project 18: Windows Malware Detection & SOC Investigation](project18-windows-malware-detection/)
 
 
 

@@ -4,41 +4,40 @@ Welcome! This repository contains step-by-step Linux system administration, cybe
 
 ## 🔥 Featured Resume Projects (Start Here)
 
-These projects best demonstrate hands-on Linux system administration and SOC/blue-team skills.  
-Recruiters and reviewers are encouraged to start here:
+These projects best demonstrate hands-on SOC / Blue Team and detection skills. Recruiters are encouraged to start here:
 
-🔥 Featured Resume Projects (Start Here)
+---
 
-These projects best demonstrate hands-on SOC / Blue Team and detection skills.
-Recruiters are encouraged to start here:
+### 🛡️ Project 18: Windows Malware Detection (Defender + Wazuh SIEM)
 
-**Project 18: Windows Malware Detection & SOC Investigation (Wazuh + Defender)**  
-Built a SOC investigation lab where Windows Defender detects malware (EICAR test file) and Wazuh collects, correlates, and visualizes the security events in the SIEM dashboard.  
-[View Project](project18-windows-malware-detection)
+Investigated real malware test detections (EICAR) on Windows using Microsoft Defender and correlated events in Wazuh SIEM. Demonstrated endpoint detection, log ingestion, SIEM visibility, and malware investigation workflow.
 
-- **Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)**  
-  Built a SOC lab using Wazuh SIEM to detect and investigate authentication attacks across Windows and Linux endpoints.  
-  👉 [View Project](project14-wazuh-authentication-incident)
+👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project18-windows-malware-detection
 
-- **Project 13: Suricata IDS – Detection & Alert Tuning**  
-  Built a SOC lab using Suricata IDS, authored custom detection rules, validated alerts, and tuned noisy signatures.  
-  👉 [View Project](project13-suricata-ids-detection)
+---
 
-- **Project 12: Windows Active Directory Attack & Defense**  
-  Simulated AD attacks, analyzed failed logons and account lockouts (Event IDs 4625, 4740), and documented detection evidence.  
-  👉 [View Project](project12-ad-attack-defense)
+### 🚨 Project 17: SOC Alert Triage & Case Management (Wazuh SIEM)
 
-- **Project 15: OpenVPN Remote Access VPN**
-  Secure remote access VPN server and client using certificates and encrypted tunnel.
-  📁 [View Project](project15-openvpn-remote-access/)
+Demonstrated a full SOC workflow: triage, investigation, classification, severity assignment, and case documentation across Linux and Windows alerts using Wazuh SIEM.
 
-- **Project 16: SOC Investigation – SSH Brute Force Attack**
-  Investigated a real SSH brute-force attempt (Hydra) detected by Wazuh SIEM; validated logs and documented response steps.
-  📁 [View Project](project16-soc-ssh-bruteforce-investigation/)
+👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project17-soc-alert-triage-case-management
 
-- **Project 17: SOC Alert Triage & Case Management**  
-  Demonstrated full SOC workflow: triage, investigation, classification, severity assignment, and case documentation across Linux and Windows using Wazuh SIEM.  
-  📁 [View Project](project17-soc-alert-triage-case-management/)
+---
+
+### 🔐 Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)
+
+Built a SOC lab using Wazuh SIEM to detect and investigate authentication attacks across Windows and Linux endpoints. Simulated SSH failures and Windows failed logons (Event ID 4625) and documented the investigation.
+
+👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project14-wazuh-authentication-incident
+
+---
+
+### 🌐 Project 13: Suricata IDS – Detection & Alert Tuning
+
+Built a Suricata IDS lab, authored custom detection rules, generated malicious traffic, validated alerts, and tuned noisy signatures to reduce false positives.
+
+👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project13-suricata-ids-detection
+
 
 
 ## 💡 What You’ll Find

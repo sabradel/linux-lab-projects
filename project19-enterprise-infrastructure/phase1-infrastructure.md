@@ -6,18 +6,15 @@
 - web01 (Ubuntu Server) - Web / App Server
 - backup01 (Ubuntu Server) - Backup Server
 - log01 (Ubuntu Server) - Log Server
-
-## Machines (Planned Next)
-
 - monitor01 (Ubuntu Server) - Monitoring Server
-- kali01 (Kali Linux) - Attack / Security Testing
+- kali-attack (Kali Linux) - Attack / Security Testing
 
 ## Network
 
 - Hyper-V Virtual Network: Default Switch
 - All machines are in the same subnet and can:
   - Ping each other
-  - SSH to each other from Fedora
+  - Be accessed via SSH from Fedora
 
 ## Proof Commands Used
 
@@ -34,3 +31,7 @@ From Fedora:
 - web01  
 - backup01  
 - log01  
+- monitor01  
+
+✅ Kali Linux deployed for attack simulation
+'

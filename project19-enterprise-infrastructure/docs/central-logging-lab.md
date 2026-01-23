@@ -1,84 +1,151 @@
 # Centralized Logging SOC Lab
 
 ## Goal
-Build a centralized logging server using rsyslog that collects logs from multiple Linux systems.
+Build a centralized logging server using rsyslog that collects logs from multiple Linux systems in an isolated lab network and simulates real SOC log ingestion and incident response scenarios.
 
 ## Lab Topology
 
-log01      = 10.10.10.30  (Log Server)
-monitor01  = 10.10.10.40  (Monitor Server)
-backup01   = 10.10.10.20  (Backup Server)
-fedora-wrk01 = 10.10.10.10 (Admin PC)
-kali01     = 10.10.10.50  (Attacker)
+log01           = 10.10.10.30  (Central Log Server)
+monitor01       = 10.10.10.40  (Monitor Server)
+backup01        = 10.10.10.20  (Backup Server)
+fedora-wrk01    = 10.10.10.10  (Admin Workstation)
+kali01          = 10.10.10.50  (Attacker)
 
-## Phase 1 — Log Server (log01)
+All systems are connected to an internal Hyper-V switch (LabSwitch).
+
+---
+
+# Phase 1 – Central Log Server Setup (log01)
 
 - Installed rsyslog
-- Verified rsyslog service is running
-- Opened port 514 TCP/UDP
-- Created folder /var/log/remote
-- Configured rsyslog to store logs per host
+- Enabled TCP and UDP log listeners on port 514
+- Created directory:
+
+  /var/log/remote/
+
+- Configured rsyslog to store logs per-host in:
+
+  /var/log/remote/<hostname>/
+
+- Restarted rsyslog service
+- Verified service is listening on port 514
+- Tested local logging using:
+
+  logger "HELLO FROM LOG01 SOC LAB"
+
+---
+
+# Phase 2 – Client Log Forwarding (monitor01)
+
+- Installed rsyslog on monitor01
+- Configured rsyslog to forward logs to:
+
+  10.10.10.30:514
+
 - Restarted rsyslog
-- Tested logging using logger command
+- Sent test log using:
 
+  logger "HELLO FROM MONITOR01 SOC LAB"
 
-# Phase 2 - Client Log Forwarding (monitor01)
+- Verified logs appeared on log01 under:
 
-Installed rsyslog on monitor01
-Configured rsyslog to forward logs to log01 (10.10.10.30)
-Restarted rsyslog on monitor01
-Sent test log using logger command
-Verified logs appeared on log01 under /var/log/remote/monitor01/
-
-### Proof
-
-- Verified monitor01 logs arrived at log01
-- Log file path:
-/var/log/remote/monitor01/ash.log
+  /var/log/remote/monitor01/
 
 - Sample log entry:
-2026-01-23T05:03:10+00:00 monitor01 ash: HELLO FROM MONITOR01 SOC LAB
 
+  2026-01-23T05:03:10+00:00 monitor01 ash: HELLO FROM MONITOR01 SOC LAB
 
-## Phase 3 — Backup Server Logging (backup01)
+---
+
+# Phase 3 – Backup Server Logging (backup01)
 
 - Installed rsyslog on backup01
-- Configured forwarding to log01
+- Configured rsyslog to forward logs to log01
 - Restarted rsyslog
-- Sent test log using logger
-- Verified logs arrived in:
+- Sent test log using:
 
-/var/log/remote/backup01/
+  logger "HELLO FROM BACKUP01 SOC LAB"
 
+- Verified on log01 using:
 
-# Phase 3 — Multi-Client Log Ingestion
+  ls /var/log/remote
+  grep -R "HELLO" /var/log/remote/
 
-- Configured rsyslog on monitor01 to forward logs to log01
-- Verified logs arrived under /var/log/remote/monitor01/
-- Configured rsyslog on backup01 to forward logs to log01
-- Verified logs arrived under /var/log/remote/backup01/
-- Used logger command on both systems to generate test logs
-- Confirmed centralized collection is working
+- Logs confirmed under:
 
-Proof commands used:
+  /var/log/remote/backup01/
 
-On clients:
-logger "HELLO FROM MONITOR01 SOC LAB"
-logger "HELLO FROM BACKUP01 SOC LAB"
+---
 
-On log01:
-ls /var/log/remote
-grep -R "HELLO" /var/log/remote/
+# Phase 4 – Multi-Client Log Ingestion Verification
 
+- Confirmed monitor01 and backup01 both send logs to log01
+- Verified directories:
 
-# Recovery Event (Hyper-V)
+  /var/log/remote/monitor01/
+  /var/log/remote/backup01/
 
-- Hyper-V checkpoint/state corruption occurred
+- Used logger on both systems to generate test logs
+- Confirmed centralized collection is working correctly
+
+---
+
+# Incident: Hyper-V VM State Corruption & Recovery
+
+## Incident Summary
+
+- Hyper-V checkpoint / state file corruption occurred
 - All VMs failed to boot due to missing .vmgs files
-- Recovered all VMs by re-attaching existing VHDX disks
-- No data or configuration was lost
+- Error example:
+
+  The system cannot find the file specified (.vmgs)
+
+## Recovery Actions
+
+- Identified that VHDX disks were intact
+- Removed broken VM objects (without deleting disks)
+- Re-created VMs and re-attached existing VHDX disks
 - Disabled checkpoints permanently
+- Reconfigured VM firmware and boot settings
+- Successfully restored all systems:
 
-This simulates a real enterprise virtualization recovery scenario.
+  log01, monitor01, backup01, web01, fedora-wrk01, kali01
 
+## Result
 
+- Zero data loss
+- All SOC lab services restored
+- Logging infrastructure remained fully intact
+
+This simulates a real enterprise virtualization disaster recovery scenario.
+
+---
+
+# Phase 5 – Attacker Log Ingestion (kali01)
+
+- Installed rsyslog on kali01
+- Configured rsyslog to forward logs to log01 over TCP 514
+- Restarted rsyslog
+- Sent test log using:
+
+  logger "HELLO FROM KALI01 SOC LAB"
+
+- Verified logs appeared on log01 under:
+
+  /var/log/remote/kali01/
+
+- Confirmed attacker machine activity is now visible in centralized logs
+
+---
+
+# Final Result
+
+This lab demonstrates:
+
+- Centralized Linux logging architecture
+- Multi-client log ingestion
+- SOC-style log verification
+- Incident recovery of a broken virtualization platform
+- Attacker activity being logged and centrally collected
+
+This simulates a real enterprise SOC logging and infrastructure recovery environment.

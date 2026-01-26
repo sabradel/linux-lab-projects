@@ -149,3 +149,24 @@ This lab demonstrates:
 - Attacker activity being logged and centrally collected
 
 This simulates a real enterprise SOC logging and infrastructure recovery environment.
+
+
+# Phase 10 — Final Validation (SOC Proof)
+
+## Evidence Collected
+Screenshots saved in:
+- screenshots/phase10/
+
+## Commands Used (Final Proof)
+
+### On log01 (prove attack logs exist)
+sudo ls -lah /var/log/remote
+sudo grep -R "Failed password" /var/log/remote/ | head -n 20
+sudo grep -R "10.10.10.50" /var/log/remote/ | head -n 20
+
+### On monitor01 (prove auto-blocking works)
+sudo fail2ban-client status sshd
+
+### On kali01 (prove attacker is blocked)
+ssh ash@10.10.10.40
+

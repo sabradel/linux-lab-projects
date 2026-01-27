@@ -8,6 +8,14 @@ These projects best demonstrate hands-on SOC / Blue Team and detection skills. R
 
 ---
 
+## 🏗️ Project 19: Enterprise Infrastructure Security Lab (Multi-Server SOC Environment)
+
+Designed and built a multi-server enterprise Linux environment including web, monitoring, logging, and backup servers. Simulated real SSH attacks from Kali Linux, centralized logs, investigated incidents, and implemented automated defense using Fail2ban with firewall enforcement. Demonstrates enterprise architecture, SOC-style investigation, and automated attack response.
+
+👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project19-enterprise-infrastructure
+
+---
+
 ### 🛡️ Project 18: Windows Malware Detection (Defender + Wazuh SIEM)
 
 Investigated real malware test detections (EICAR) on Windows using Microsoft Defender and correlated events in Wazuh SIEM. Demonstrated endpoint detection, log ingestion, SIEM visibility, and malware investigation workflow.
@@ -64,6 +72,7 @@ Built a Suricata IDS lab, authored custom detection rules, generated malicious t
 - [Project 16: SOC Investigation – SSH Brute Force Attack](project16-soc-ssh-bruteforce-investigation/)
 - [Project 17: SOC Alert Triage & Case Management](project17-soc-alert-triage-case-management/)
 - [Project 18: Windows Malware Detection & SOC Investigation](project18-windows-malware-detection/)
+- [Project 19: Enterprise Infrastructure Security Lab (Multi-Server SOC Environment)](project19-enterprise-infrastructure/)
 
 
 

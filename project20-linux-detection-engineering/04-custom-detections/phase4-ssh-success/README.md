@@ -1,38 +1,41 @@
-# Phase 4 – SSH Success & Privilege Escalation Detection
+# Phase 4 – Custom Detection: SSH Login Success
 
 ## Objective
-Detect successful SSH authentication followed by privilege escalation via sudo spawning an interactive root shell.
+Detect successful SSH logins on a Linux endpoint using Wazuh custom rules.
+This detection helps identify potential misuse of valid credentials and
+establishes visibility into remote access activity.
 
 ---
 
 ## Environment
-- Attacker: Kali Linux
-- Target: Debian 12 (agent: adel)
-- SIEM: Wazuh Manager on Ubuntu (soc01)
+- **SIEM:** Wazuh Manager (soc01)
+- **Agent:** Debian Linux (adel – 192.168.56.107)
+- **Attacker / Source:** Kali Linux (192.168.56.101)
+- **Log source:** journald / sshd
+
+---
+
+## Threat Context
+Successful SSH authentication can indicate:
+- Legitimate administrative access
+- Use of stolen or reused credentials
+- Initial access using valid accounts
+
+**MITRE ATT&CK**
+- T1078 – Valid Accounts
 
 ---
 
 ## Detection Logic
 
-### Rule 100200 – Successful SSH Login
-Triggers when:
-- SSH authentication succeeds
-- Maps to MITRE T1078 (Valid Accounts)
+### Wazuh Rule
+**File:** `/var/ossec/etc/rules/local_rules.xml`
 
-### Rule 100202 – Privilege Escalation
-Triggers when:
-- A sudo command spawns `/bin/bash`
-- Indicates interactive root shell
-- Severity: Level 8
-- MITRE: T1548.003 (Sudo and Sudo Caching)
-
----
-
-## Attack Simulation
-
-From Kali:
-```bash
-ssh adel@192.168.56.107
-sudo /bin/bash
-exit
-exit
+```xml
+<group name="local,linux,ssh,authentication">
+  <rule id="100200" level="5">
+    <if_sid>5715</if_sid>
+    <description>Successful SSH login detected on Linux endpoint</description>
+    <mitre>T1078</mitre>
+  </rule>
+</group>

@@ -33,7 +33,7 @@ sudo whoami
 
 ## Screenshot of User Management Commands
 
-![User management sudo verification](screenshots/01-user-management-sudo-proof.png)
+![User management – sudo access verification](screenshots/user-management-sudo-verification.png)
 
 
 ---

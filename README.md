@@ -76,6 +76,7 @@ Built a Suricata IDS lab, authored custom detection rules, generated malicious t
 - [Project 20: Linux Detection Engineering – Custom Wazuh Rules & Privilege Escalation Detection](project20-linux-detection-engineering/)
 - [Project 21: Linux Threat Hunting with Wazuh (Behavior-Based Detection)](project21-linux-threat-hunting/)
 - [Project 22: Linux Log Analysis with Wazuh (Authentication & Command Monitoring)](project22-linux-log-analysis/)
+- [Project 23: Linux CLI Mastery (System Administration & SOC Workflows)](project23-linux-cli-mastery/)
 
 
 

@@ -3,7 +3,7 @@
 ## 📌 Project Overview
 This project documents how I converted an old laptop into a **real bare-metal Ubuntu Server** (NOT a VM) and configured it as a **headless SOC log server**.
 
-The server runs on WiFi with a **static IP address** and is managed remotely via **SSH** from my MacBook and Linux workstation.
+The server runs on **WiFi** with a **static IP address** and is managed remotely via **SSH** from my MacBook and Linux workstation.
 
 This project serves as the foundation for future SOC infrastructure such as:
 
@@ -35,6 +35,7 @@ Key achievements:
 ## 🖥️ Lab Environment (Bare Metal Hardware)
 
 ### Server Machine (Bare Metal)
+
 | Component | Value |
 |----------|-------|
 | Device Type | Laptop (Bare Metal Server) |
@@ -44,6 +45,7 @@ Key achievements:
 | Role | SOC Log Server / Central Logging Node |
 
 ### Client Machines (Administration Workstations)
+
 | Device | Role |
 |--------|------|
 | MacBook Pro 2020 | SSH Client / Documentation |
@@ -52,19 +54,10 @@ Key achievements:
 ---
 
 ## 🌐 Network Architecture
+The server is connected to WiFi and assigned a static IP address.
 
+It can be accessed remotely via SSH:
 
-## Troubleshooting & Lessons Learned
-
-### Issue 1: Static IP not applying after reboot
-**Problem:**  
-After setting a static IP, rebooting the server sometimes returned the IP back to DHCP.
-
-**Cause:**  
-Ubuntu Server uses Netplan and sometimes cloud-init manages the file:
-`/etc/netplan/50-cloud-init.yaml`
-
-**Fix / Command Used:**
 ```bash
-sudo netplan apply
+ssh adel@192.168.1.200
 

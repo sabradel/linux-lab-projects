@@ -1,4 +1,6 @@
-![](screenshots/09-banner.png)
+<p align="center">
+  <img src="screenshots/09-banner.png" width="850">
+</p>
 
 # Project 24 – Bare Metal Ubuntu Log Server Setup (WiFi + Static IP + SSH Headless)
 

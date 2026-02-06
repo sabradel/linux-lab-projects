@@ -59,5 +59,5 @@ The server is connected to WiFi and assigned a static IP address.
 It can be accessed remotely via SSH:
 
 ```bash
-ssh adel@192.168.1.200
+ssh adel@log-server01.local
 

@@ -17,6 +17,31 @@ This project serves as the foundation for future SOC infrastructure such as:
 
 ## ⭐ Why This Project Matters (What Makes It Strong)
 Most students build servers only inside VirtualBox or VMware.
+---
+
+## 🧠 Skills Demonstrated
+
+- Linux Server installation on bare metal hardware
+- WiFi troubleshooting on Ubuntu Server
+- Static IP configuration using Netplan
+- DNS and routing verification
+- SSH headless remote administration
+- Systemd service management
+- SOC lab infrastructure preparation
+- Professional GitHub documentation with screenshots evidence
+
+---
+
+## 🗺️ Network Diagram (High-Level)
+
+```text
+[MacBook Pro 2020]  ---> SSH --->  [log-server01.local (Ubuntu Server)]
+[Linux Workstation] ---> SSH --->  [log-server01.local (Ubuntu Server)]
+
+                     (WiFi Router / Access Point)
+
+
+
 
 In this project, I built a **real server on physical hardware**, configured networking manually, solved connectivity issues, and successfully deployed a stable headless setup.
 

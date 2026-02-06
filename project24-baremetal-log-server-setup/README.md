@@ -1,34 +1,56 @@
 # Project 24 – Bare Metal Ubuntu Log Server Setup (WiFi + Static IP + SSH Headless)
 
-## Project Overview
-This project documents how I converted an old laptop into a **real bare-metal Ubuntu Server** (not a VM) and configured it as a headless server accessible over WiFi using SSH.
+## 📌 Project Overview
+This project documents how I converted an old laptop into a **real bare-metal Ubuntu Server** (NOT a VM) and configured it as a **headless SOC log server**.
 
-This setup is intended to be used as the foundation for future SOC projects including:
+The server runs on WiFi with a **static IP address** and is managed remotely via **SSH** from my MacBook and Linux workstation.
+
+This project serves as the foundation for future SOC infrastructure such as:
+
 - Centralized Linux log collection
 - rsyslog forwarding
-- SIEM log ingestion (Wazuh / Splunk / Graylog)
-- Threat detection and incident response labs
+- Wazuh / Splunk / Graylog log ingestion
+- Threat detection labs
+- Incident response & forensic investigation environments
 
 ---
 
-## Lab Environment (Bare Metal Hardware)
+## ⭐ Why This Project Matters (What Makes It Strong)
+Most students build servers only inside VirtualBox or VMware.
 
-**Host Machine (Server):**
-- Device Type: Laptop (Bare Metal)
-- OS: Ubuntu Server 22.04 LTS
-- Hostname: `log-server01`
-- Network: WiFi (Broadcom BCM4381)
-- Role: Log Server / SOC Utility Server
+In this project, I built a **real server on physical hardware**, configured networking manually, solved connectivity issues, and successfully deployed a stable headless setup.
 
-**Client Machines Used to Manage Server:**
-- MacBook Pro 2020 (SSH client)
-- Workstation Linux machine (SSH client)
+Key achievements:
+
+✅ Installed Ubuntu Server on bare metal laptop  
+✅ Configured WiFi networking on Ubuntu Server  
+✅ Assigned static IP address using Netplan  
+✅ Verified routing + DNS resolution  
+✅ Enabled SSH for remote headless access  
+✅ Verified auto-connect and system uptime  
+✅ Confirmed the system is NOT running inside a VM  
 
 ---
 
-## Proof This Is Bare Metal (Not Virtual Machine)
+## 🖥️ Lab Environment (Bare Metal Hardware)
 
-### Check system hardware vendor
-```bash
-sudo dmidecode -s system-manufacturer
-sudo dmidecode -s system-product-name
+### Server Machine (Bare Metal)
+| Component | Value |
+|----------|-------|
+| Device Type | Laptop (Bare Metal Server) |
+| OS | Ubuntu Server 22.04 LTS |
+| Hostname | log-server01 |
+| Network | WiFi |
+| Role | SOC Log Server / Central Logging Node |
+
+### Client Machines (Administration Workstations)
+| Device | Role |
+|--------|------|
+| MacBook Pro 2020 | SSH Client / Documentation |
+| Linux Workstation | SSH Client / SOC Lab Workstation |
+
+---
+
+## 🌐 Network Architecture
+
+

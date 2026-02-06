@@ -80,6 +80,20 @@ Key achievements:
 
 ## 🌐 Network Architecture
 The server is connected to WiFi and assigned a static IP address.
+### Network Layout (Home SOC Lab)
+
+[Router / WiFi AP]
+        |
+        | (WiFi)
+        |
+[log-server01 - Ubuntu Server 22.04]
+Static IP: 192.168.1.200
+SSH Enabled: Port 22
+        |
+        | (SSH Remote Access)
+        |
+[MacBook Pro 2020] + [Linux Workstation]
+
 
 It can be accessed remotely via SSH:
 

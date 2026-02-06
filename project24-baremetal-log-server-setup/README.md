@@ -1,8 +1,7 @@
-<p align="center">
-  <img src="screenshots/09-banner.png" width="850">
-</p>
-
 # Project 24 – Bare Metal Ubuntu Log Server Setup (WiFi + Static IP + SSH Headless)
+
+![](screenshots/09-server-status-summary.png)
+
 
 ## 📌 Project Overview
 This project documents how I converted an old laptop into a **real bare-metal Ubuntu Server** (NOT a VM) and configured it as a **headless SOC log server**.

@@ -54,3 +54,17 @@ Key achievements:
 ## 🌐 Network Architecture
 
 
+## Troubleshooting & Lessons Learned
+
+### Issue 1: Static IP not applying after reboot
+**Problem:**  
+After setting a static IP, rebooting the server sometimes returned the IP back to DHCP.
+
+**Cause:**  
+Ubuntu Server uses Netplan and sometimes cloud-init manages the file:
+`/etc/netplan/50-cloud-init.yaml`
+
+**Fix / Command Used:**
+```bash
+sudo netplan apply
+

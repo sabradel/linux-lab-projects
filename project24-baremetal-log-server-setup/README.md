@@ -86,3 +86,30 @@ It can be accessed remotely via SSH:
 ```bash
 ssh adel@log-server01.local
 
+---
+
+## ✅ Screenshots Evidence (Proof)
+These screenshots prove the server is working, reachable, and running on real hardware.
+
+| Step | Screenshot |
+|------|------------|
+| Hostname Check | ![](screenshots/01-hostnamectl.png) |
+| OS Version Proof | ![](screenshots/02-os-release.png) |
+| Static IP Applied | ![](screenshots/03-ip-address.png) |
+| Default Gateway Route | ![](screenshots/04-ip-route.png) |
+| SSH Service Running | ![](screenshots/05-ssh-status.png) |
+| WiFi Connection Verified | ![](screenshots/06-nmcli-connection.png) |
+| Internet Access Verified | ![](screenshots/07-ping-google.png) |
+| Bare Metal Proof (DMI Decode) | ![](screenshots/08-dmidecode-baremetal-proof.png) |
+
+---
+
+## 🧠 Troubleshooting & Lessons Learned
+
+### Issue 1: Static IP not applying after reboot
+**Problem:** After reboot, the server sometimes came back with a DHCP IP.  
+**Cause:** Netplan + cloud-init can manage `/etc/netplan/50-cloud-init.yaml`.  
+**Fix:**
+```bash
+sudo netplan apply
+

@@ -1,3 +1,5 @@
+![](screenshots/09-banner.png)
+
 # Project 24 – Bare Metal Ubuntu Log Server Setup (WiFi + Static IP + SSH Headless)
 
 ## 📌 Project Overview

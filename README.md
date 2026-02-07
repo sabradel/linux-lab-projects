@@ -79,6 +79,7 @@ Built a Suricata IDS lab, authored custom detection rules, generated malicious t
 - [Project 23: Linux CLI Mastery (System Administration & SOC Workflows)](project23-linux-cli-mastery/)
 - [Project 24: Bare Metal Ubuntu Log Server Setup (WiFi + Static IP + SSH Headless)](project24-baremetal-log-server-setup)
 - [Project 25: Centralized Logging with Rsyslog (Client → Server Forwarding)](project25-central-logging-rsyslog)
+- [Project 26: Log Rotation & Storage Management (logrotate + cleanup)](project26-log-rotation-storage-management)
 
 
 

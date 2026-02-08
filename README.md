@@ -98,6 +98,14 @@ Built a Suricata IDS lab, authored custom detection rules, generated malicious t
 - SOC log analysis & alert simulation
 - Git & GitHub version control
 
+## 🧭 Skills Map (Where to Look)
+- **Bare metal server + networking:** Project 24  
+- **Central logging pipeline:** Project 25 + 26  
+- **SOC detection & triage (Wazuh):** Projects 14, 17, 22  
+- **Network IDS & tuning:** Project 13  
+- **Enterprise-style environment:** Project 19  
+
+
 ## 📌 Notes
 Clone the repo, navigate to any project folder, and follow the instructions in its `README.md`.  
 Each project folder is self-contained and includes commands, configuration examples, and screenshots where relevant.

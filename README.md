@@ -15,43 +15,21 @@ These projects best demonstrate hands-on SOC / Blue Team and detection skills. R
 
 ## 🏗️ Project 19: Enterprise Infrastructure Security Lab (Multi-Server SOC Environment)
 
-Designed and built a multi-server enterprise Linux environment including web, monitoring, logging, and backup servers. Simulated real SSH attacks from Kali Linux, centralized logs, investigated incidents, and implemented automated defense using Fail2ban with firewall enforcement. Demonstrates enterprise architecture, SOC-style investigation, and automated attack response.
+Designed and built a multi-server enterprise Linux environment including web, monitoring, logging, and backup servers. Simulated real SSH attacks from Kali Linux, centralized logs, investigated incidents, and implemented automated defense using Fail2ban.
 
 👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project19-enterprise-infrastructure
 
 ---
 
-### 🛡️ Project 18: Windows Malware Detection (Defender + Wazuh SIEM)
+## 🖥️ Project 24–26: Bare Metal SOC Log Server Pipeline (Physical Server + Logging + Retention)
 
-Investigated real malware test detections (EICAR) on Windows using Microsoft Defender and correlated events in Wazuh SIEM. Demonstrated endpoint detection, log ingestion, SIEM visibility, and malware investigation workflow.
+Built a real Ubuntu Server on physical hardware (bare metal) and configured it as a SOC log server with static IP, SSH headless administration, centralized rsyslog forwarding, and log retention using logrotate.
 
-👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project18-windows-malware-detection
-
----
-
-### 🚨 Project 17: SOC Alert Triage & Case Management (Wazuh SIEM)
-
-Demonstrated a full SOC workflow: triage, investigation, classification, severity assignment, and case documentation across Linux and Windows alerts using Wazuh SIEM.
-
-👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project17-soc-alert-triage-case-management
+👉 Project 24: https://github.com/sabradel/linux-lab-projects/tree/main/project24-baremetal-log-server-setup  
+👉 Project 25: https://github.com/sabradel/linux-lab-projects/tree/main/project25-central-logging-rsyslog  
+👉 Project 26: https://github.com/sabradel/linux-lab-projects/tree/main/project26-log-rotation-storage-management  
 
 ---
-
-### 🔐 Project 14: Wazuh SIEM – Authentication Attack Detection (Windows + Linux)
-
-Built a SOC lab using Wazuh SIEM to detect and investigate authentication attacks across Windows and Linux endpoints. Simulated SSH failures and Windows failed logons (Event ID 4625) and documented the investigation.
-
-👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project14-wazuh-authentication-incident
-
----
-
-### 🌐 Project 13: Suricata IDS – Detection & Alert Tuning
-
-Built a Suricata IDS lab, authored custom detection rules, generated malicious traffic, validated alerts, and tuned noisy signatures to reduce false positives.
-
-👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project13-suricata-ids-detection
-
-
 
 ## 💡 What You’ll Find
 - Self-contained projects with objectives and instructions

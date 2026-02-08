@@ -1,5 +1,10 @@
 # Linux Lab Projects - Repository Overview
 
+## 🎯 Career Target
+**Junior Linux System Administrator / SOC Analyst (Blue Team) / IT Support (Linux-focused)**
+
+**What I can do:** build Linux servers, secure SSH, centralize logs, detect attacks (Wazuh/Suricata), and document everything with proof screenshots.
+
 Welcome! This repository contains step-by-step Linux system administration, cybersecurity, and SOC/blue team labs.
 
 ## 🔥 Featured Resume Projects (Start Here)

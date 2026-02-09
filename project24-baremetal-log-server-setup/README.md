@@ -1,48 +1,51 @@
-# Project 24 – Bare Metal Ubuntu Log Server Setup (WiFi + Static IP + SSH Headless)
+# Project 24 – Bare Metal Ubuntu Log Server Setup (WiFi + Static IP + SSH Headless + Tailscale Remote Access)
 
 ![](screenshots/09-banner.png)
 
+---
+
 ## 📌 Project Overview
+
 This project documents how I converted an old laptop into a **real bare-metal Ubuntu Server** (NOT a VM) and configured it as a **headless SOC log server**.
 
-The server runs on **WiFi** with a **static IP address** and is managed remotely via **SSH** from my MacBook and Linux workstation.
+The server runs on **WiFi**, uses a **static IP address**, and is managed remotely via **SSH** from my Pop!_OS workstation and MacBook Pro.
 
-This project serves as the foundation for future SOC infrastructure such as:
+To enable secure remote access from anywhere in the world (outside my home network), I deployed **Tailscale VPN**, allowing encrypted access without exposing SSH (port 22) to the public internet.
 
-- Centralized Linux log collection
-- rsyslog forwarding
-- Wazuh / Splunk / Graylog log ingestion
-- Threat detection labs
-- Incident response & forensic investigation environments
+This project is the foundation for my SOC infrastructure and future centralized logging projects.
 
 ---
 
-## ⭐ Why This Project Matters (What Makes It Strong)
+## ⭐ Why This Project Matters (Real-World Value)
+
 Most students build servers only inside VirtualBox or VMware.
 
-In this project, I built a **real server on physical hardware**, configured networking manually, solved connectivity issues, and successfully deployed a stable headless setup.
+In this project, I built a **real server on physical hardware**, configured WiFi networking manually, solved connectivity issues, enabled secure remote access, and verified stable operation.
 
 Key achievements:
 
-- ✅ Installed Ubuntu Server on bare metal laptop
-- ✅ Configured WiFi networking on Ubuntu Server
+- ✅ Installed Ubuntu Server on bare metal hardware
+- ✅ Configured WiFi on Ubuntu Server (headless)
 - ✅ Assigned static IP address using Netplan
-- ✅ Verified routing + DNS resolution
-- ✅ Enabled SSH for remote headless access
-- ✅ Verified auto-connect and system uptime
-- ✅ Confirmed the system is NOT running inside a VM
+- ✅ Verified routing and DNS resolution
+- ✅ Enabled SSH remote administration
+- ✅ Verified SSH port listening and remote login
+- ✅ Deployed Tailscale VPN for secure global access
+- ✅ Verified remote SSH access over Tailscale from MacBook Pro
 
 ---
 
 ## 🧠 Skills Demonstrated
-- Linux Server installation on bare metal hardware
+
+- Linux server installation (bare metal)
 - WiFi troubleshooting on Ubuntu Server
 - Static IP configuration using Netplan
 - DNS and routing verification
 - SSH headless remote administration
 - systemd service management
-- SOC lab infrastructure preparation
-- Professional GitHub documentation with screenshots evidence
+- VPN-based secure remote access (Tailscale)
+- SOC infrastructure design foundations
+- Professional GitHub documentation with proof screenshots
 
 ---
 
@@ -53,7 +56,7 @@ Key achievements:
 | Component | Value |
 |----------|-------|
 | Device Type | Laptop (Bare Metal Server) |
-| OS | Ubuntu Server 22.04 LTS |
+| OS | Ubuntu Server 22.04.5 LTS |
 | Hostname | log-server01 |
 | Network | WiFi |
 | Role | SOC Log Server / Central Logging Node |
@@ -62,17 +65,18 @@ Key achievements:
 
 | Device | Role |
 |--------|------|
-| MacBook Pro 2020 | SSH Client / Documentation |
-| Linux Workstation | SSH Client / SOC Lab Workstation |
+| Pop!_OS Workstation | SSH Client / Lab Workstation |
+| MacBook Pro 2020 | SSH Client / Remote Administration |
+| iPhone 13 | Tailscale VPN Client |
 
 ---
 
 ## 🌐 Network Architecture
 
-### Network Layout (Home SOC Lab)
+### Home SOC Lab Layout
 
 ```text
-[MacBook Pro 2020]  ---> SSH --->  [log-server01.local (Ubuntu Server)]
-[Linux Workstation] ---> SSH --->  [log-server01.local (Ubuntu Server)]
+[MacBook Pro 2020]  ---> SSH --->  [log-server01 (Ubuntu Server)]
+[Pop!_OS Workstation] ---> SSH ---> [log-server01 (Ubuntu Server)]
 
-                     (WiFi Router / Access Point)
+                (WiFi Router / Access Point)

@@ -59,6 +59,8 @@ Key achievements:
 | OS | Ubuntu Server 22.04.5 LTS |
 | Hostname | log-server01 |
 | Network | WiFi |
+| LAN Static IP | 192.168.1.200 |
+| Tailscale VPN IP | 100.100.30.98 |
 | Role | SOC Log Server / Central Logging Node |
 
 ### Client Machines (Administration Workstations)
@@ -73,7 +75,7 @@ Key achievements:
 
 ## 🌐 Network Architecture
 
-### Home SOC Lab Layout
+### Home SOC Lab Layout (Local Network)
 
 ```text
 [MacBook Pro 2020]  ---> SSH --->  [log-server01 (Ubuntu Server)]

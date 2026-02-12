@@ -63,6 +63,7 @@ Built a real Ubuntu Server on physical hardware (bare metal) and configured it a
 - [Project 24: Bare Metal Ubuntu Log Server Setup (WiFi + Static IP + SSH Headless)](project24-baremetal-log-server-setup)
 - [Project 25: Centralized Logging with Rsyslog (Client → Server Forwarding)](project25-central-logging-rsyslog)
 - [Project 26: Log Rotation & Storage Management (logrotate + cleanup)](project26-log-rotation-storage-management)
+- [Project 28: Helpdesk Active Directory Lab – Users, Groups, Shared Drives & GPO Automation](project28-ad-gpo-drive-mapping/)
 
 
 

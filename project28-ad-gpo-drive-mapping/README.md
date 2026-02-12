@@ -107,3 +107,5 @@ gpupdate /force
 gpresult /r
 net use
 wmic logicaldisk get name
+
+---

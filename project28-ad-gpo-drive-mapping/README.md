@@ -121,7 +121,7 @@ gpresult /r
 net use
 wmic logicaldisk get name
 echo %logonserver%
-'''
+```
 ---
 
 ## 🖼️ Evidence (Screenshots)

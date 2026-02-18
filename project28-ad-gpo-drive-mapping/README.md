@@ -1,55 +1,66 @@
-# Project 28: Helpdesk Active Directory Lab – Users, Groups, Shared Drives & GPO Automation
+# Project 28: Helpdesk Active Directory Lab – Drive Mapping with GPO (HR + Sales)
 
 ## 📌 Overview
-This lab demonstrates a real-world **Helpdesk / Desktop Support Active Directory environment** where users and departments are managed using **Active Directory**, and shared network drives are mapped automatically using **Group Policy Objects (GPOs)**.
+This project simulates a real-world **IT Helpdesk / Desktop Support Active Directory environment**.
 
-The lab includes two departments (**HR** and **Sales**) with different access rights, using **Security Groups + Security Filtering** to ensure correct access control.
+In this lab, I built a small enterprise domain where users are organized into departments (**HR** and **Sales**) and shared drives are automatically mapped using **Group Policy Preferences (Drive Maps)**.
+
+The goal is to demonstrate **real workplace skills** such as:
+- Active Directory user/group management
+- SMB file sharing
+- GPO automation
+- Access control using security groups
+- Troubleshooting Group Policy issues
 
 ---
 
-## 🎯 Lab Objectives
-- Create Organizational Units (OUs) for users, computers, and groups
-- Create HR and Sales security groups
-- Create HR and Sales user accounts
-- Create shared folders for each department
-- Configure SMB shared folders
-- Create and configure Group Policy Objects (GPOs) to map drives automatically
-- Apply security filtering so only the correct department users receive the correct drive mapping
-- Verify results using `gpupdate`, `gpresult`, and File Explorer
+## 🎯 Skills Demonstrated (Recruiter Friendly)
+✅ Active Directory User & Group Administration  
+✅ Organizational Unit (OU) Structure Design  
+✅ SMB Share Configuration (Linux File Server)  
+✅ Group Policy Management (GPMC)  
+✅ Group Policy Preferences – Drive Mapping  
+✅ Security Filtering + Item Level Targeting  
+✅ Helpdesk Troubleshooting (`gpupdate`, `gpresult`, `net use`)  
+✅ Permissions Debugging (Authenticated Users issue fix)  
+✅ Documentation + Evidence Screenshots  
 
 ---
 
 ## 🏗️ Lab Environment
 
-| Component | Hostname | OS |
-|----------|----------|----|
+| System Role | Hostname | OS |
+|------------|----------|----|
 | Domain Controller | DC01 | Windows Server 2022 |
+| File Server | FILE01 | Ubuntu Server |
 | Client Workstation | HELPDESK-PC01 | Windows 10 Pro |
-| Domain Name | firstcanadian.local | Active Directory Domain |
+
+### Domain Name
+`firstcanadian.local`
 
 ---
 
 ## 📂 Active Directory Structure
 
 ### Organizational Units (OUs)
-- FC-Users
-- FC-Groups
-- FC-Computers
-- FC-Servers
+- **FC-Users**
+- **FC-Groups**
+- **FC-Computers**
+- **FC-Servers**
 
-### Security Groups Created
-- HR_Users
-- Sales_Users
+### Security Groups
+- **HR_Users**
+- **Sales_Users**
 
-### User Accounts Created
-- maria.hr (HR Department)
-- john.sales (Sales Department)
+### Users Created
+- **maria.hr** → HR Department
+- **john.sales** → Sales Department
 
 ---
 
-## 📁 Shared Folders and Network Paths
+## 📁 File Shares Created (Ubuntu File Server)
 
-Shared folders were created and shared across the network:
+The Ubuntu file server was configured with SMB shares for each department.
 
 | Department | Drive Letter | Share Path |
 |-----------|--------------|-----------|
@@ -60,52 +71,53 @@ Shared folders were created and shared across the network:
 
 ## 🛠️ Group Policy Objects (GPOs)
 
-Two GPOs were created to map drives automatically:
+Two separate GPOs were created to automate department drive mappings:
 
-| GPO Name | Drive Letter | Share Path | Security Filtering |
-|---------|--------------|-----------|-------------------|
+| GPO Name | Drive Letter | Share Path | Applied To |
+|---------|--------------|-----------|-----------|
 | GPO-Map-HR-Drive | H: | `\\192.168.56.30\hr` | HR_Users |
 | GPO-Map-Sales-Drive | S: | `\\192.168.56.30\Sales` | Sales_Users |
 
----
-
-## ⚙️ GPO Configuration (Drive Maps)
-
 Drive mapping was configured under:
 
-`User Configuration > Preferences > Windows Settings > Drive Maps`
-
-### HR Drive Settings
-- Action: Create
-- Drive Letter: H:
-- Path: `\\192.168.56.30\hr`
-- Label: HR Drive
-
-### Sales Drive Settings
-- Action: Create
-- Drive Letter: S:
-- Path: `\\192.168.56.30\Sales`
-- Label: Sales Drive
+`User Configuration → Preferences → Windows Settings → Drive Maps`
 
 ---
 
-## 🔐 Security Filtering (Important Part)
+## 🔐 Security Filtering & Targeting
 
-Security filtering ensures that:
-- HR drive policy applies only to HR users
-- Sales drive policy applies only to Sales users
+This lab uses real enterprise access control concepts:
 
-This prevents users from accessing drives outside their department.
+### HR Drive (H:)
+- Security Filtering: **HR_Users**
+- Only HR users receive H: drive mapping
+
+### Sales Drive (S:)
+- Security Filtering: **Sales_Users**
+- Only Sales users receive S: drive mapping
+
+This prevents unauthorized users from seeing other department shares.
 
 ---
 
-## ✅ Testing and Verification
+## 🐛 Troubleshooting & Fixes Performed
 
-### Commands Used on Client PC
+During testing, the HR drive mapping initially failed due to missing permissions.
+
+### Fix Applied
+- Added **Authenticated Users** with Read permission to the GPO security settings.
+
+After the fix, Group Policy applied successfully and drive mapping worked.
+
+---
+
+## ✅ Testing & Verification Commands (Windows Client)
+
+These commands were used on Windows 10 to validate drive mapping and GPO processing:
+
 ```cmd
 gpupdate /force
 gpresult /r
 net use
 wmic logicaldisk get name
-
----
+echo %logonserver%

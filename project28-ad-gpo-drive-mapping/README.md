@@ -140,3 +140,27 @@ net use
 wmic logicaldisk get name
 echo %logonserver%
 ```
+---
+
+## 🖼️ Evidence (Screenshots)
+
+### HR Drive Mapping (Maria)
+![HR Drive Mapped](screenshots/10-hr-drive-mapped-h.png)
+
+### HR GPO Drive Map Configuration
+![HR GPO Drive Map](screenshots/08-gpo-hr-drive-map-userconfig.png)
+
+### GPO Permissions Fix (Authenticated Users Read)
+![Auth Users Read](screenshots/07-gpo-add-auth-users-read.png)
+
+### Sales Drive Mapping (John)
+![Sales Drive Visible](screenshots/14-sales-drive-visible-s.png)
+
+### Sales GPO Applied (gpresult)
+![Sales GPO Applied](screenshots/15-john-sales-gpresult-applied.png)
+
+### Sales Drive Verified (net use + wmic)
+![Sales Drive Verified](screenshots/16-sales-drive-netuse-wmic.png)
+
+### OU Placement
+![HELPDESK-PC01 in OU](screenshots/05-aduc-helpdeskpc01-in-fc-computers-ou.png)

@@ -7,8 +7,6 @@
 
 Welcome! This repository contains step-by-step Linux system administration, cybersecurity, and SOC/blue team labs.
 
-## 🔥 Featured Resume Projects (Start Here)
-
 🔥 Featured Resume Projects (Start Here)
 
 🛡️ Project 29: Wazuh SIEM Lab – Windows & Linux Attack Detection (Flagship)
@@ -32,6 +30,7 @@ Designed and built a multi-server enterprise Linux environment. Simulated SSH at
 Built a physical Ubuntu server with static IP, SSH access, and logging capabilities used for SOC lab environments.
 
 👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project24-baremetal-log-server-setup
+
 ---
 
 ## 💡 What You’ll Find

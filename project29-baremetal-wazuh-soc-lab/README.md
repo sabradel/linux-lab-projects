@@ -55,10 +55,11 @@ The attack was successfully detected in Wazuh using:
 ## 📸 Key Evidence
 
 ### 🖥️ Wazuh Dashboard (Agents Connected)
-![Agents Connected](screenshots/screenshots-24-windows-agent-connected.png)
+![Windows Agent Connected](screenshots/10-windows-agent-connected.png)
 
 ### 🚨 Failed Login Detection (Event ID 4625)
-![Failed Login Detection](screenshots/screenshots-26-wazuh-failed-login-detected.png)
+
+![Failed Login Detection](screenshots/11-wazuh-failed-login-detected.png)
 
 ---
 

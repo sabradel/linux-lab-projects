@@ -1,4 +1,4 @@
-# Linux Lab Projects - Repository Overview
+]# Linux Lab Projects - Repository Overview
 
 ## 🎯 Career Target
 **Junior Linux System Administrator / SOC Analyst (Blue Team) / IT Support (Linux-focused)**
@@ -9,26 +9,29 @@ Welcome! This repository contains step-by-step Linux system administration, cybe
 
 ## 🔥 Featured Resume Projects (Start Here)
 
-These projects best demonstrate hands-on SOC / Blue Team and detection skills. Recruiters are encouraged to start here:
+🔥 Featured Resume Projects (Start Here)
 
----
+🛡️ Project 29: Wazuh SIEM Lab – Windows & Linux Attack Detection (Flagship)
 
-## 🏗️ Project 19: Enterprise Infrastructure Security Lab (Multi-Server SOC Environment)
+Built a SOC-style SIEM lab on a bare-metal Ubuntu server using Wazuh. 
+Integrated Windows and Linux endpoints over a secure Tailscale VPN and simulated brute-force login attacks. 
+Detected failed login attempts using Windows Event ID 4625 and analyzed logs in real time.
 
-Designed and built a multi-server enterprise Linux environment including web, monitoring, logging, and backup servers. Simulated real SSH attacks from Kali Linux, centralized logs, investigated incidents, and implemented automated defense using Fail2ban.
+👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project29-baremetal-wazuh-soc-lab
+
+
+🏗️ Project 19: Enterprise Infrastructure Security Lab (Multi-Server SOC Environment)
+
+Designed and built a multi-server enterprise Linux environment. Simulated SSH attacks, centralized logs, and implemented automated defense mechanisms.
 
 👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project19-enterprise-infrastructure
 
----
 
-## 🖥️ Project 24–26: Bare Metal SOC Log Server Pipeline (Physical Server + Logging + Retention)
+🖥️ Project 24: Bare Metal Ubuntu Log Server Setup (Foundation Project)
 
-Built a real Ubuntu Server on physical hardware (bare metal) and configured it as a SOC log server with static IP, SSH headless administration, centralized rsyslog forwarding, and log retention using logrotate.
+Built a physical Ubuntu server with static IP, SSH access, and logging capabilities used for SOC lab environments.
 
-👉 Project 24: https://github.com/sabradel/linux-lab-projects/tree/main/project24-baremetal-log-server-setup  
-👉 Project 25: https://github.com/sabradel/linux-lab-projects/tree/main/project25-central-logging-rsyslog  
-👉 Project 26: https://github.com/sabradel/linux-lab-projects/tree/main/project26-log-rotation-storage-management  
-
+👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project24-baremetal-log-server-setup
 ---
 
 ## 💡 What You’ll Find
@@ -65,7 +68,7 @@ Built a real Ubuntu Server on physical hardware (bare metal) and configured it a
 - [Project 26: Log Rotation & Storage Management (logrotate + cleanup)](project26-log-rotation-storage-management)
 - [Project 27: Secure Remote SSH Access from Anywhere (Tailscale VPN)](project27-remote-access-tailscale-ssh)
 - [Project 28: Helpdesk Active Directory Lab – Users, Groups, Shared Drives & GPO Automation](project28-ad-gpo-drive-mapping/)
-
+- [Project 29: Wazuh SIEM Lab – Windows & Linux Attack Detection](project29-baremetal-wazuh-soc-lab)
 
 
 

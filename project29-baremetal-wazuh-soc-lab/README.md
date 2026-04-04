@@ -34,8 +34,9 @@ A failed login attack was simulated on a Windows machine and successfully detect
 A brute-force style login attempt was simulated on the Windows endpoint using incorrect credentials.
 
 Command used:
-runas /user:administrator cmd
 
+```cmd
+runas /user:administrator cmd
 
 Multiple failed login attempts were generated intentionally.
 

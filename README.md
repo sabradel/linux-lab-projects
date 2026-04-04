@@ -3,13 +3,13 @@
 ## 🎯 Career Target
 **Junior Linux System Administrator / SOC Analyst (Blue Team) / IT Support (Linux-focused)**
 
-**What I can do:** build Linux servers, secure SSH, centralize logs, detect attacks (Wazuh/Suricata), and document everything with proof screenshots.
+**What I can do:** Build and secure Linux systems, deploy SIEM (Wazuh), monitor logs, detect real-world attacks, and investigate security events across Windows and Linux environments.
 
 Welcome! This repository contains step-by-step Linux system administration, cybersecurity, and SOC/blue team labs.
 
 🔥 Featured Resume Projects (Start Here)
 
-🛡️ Project 29: Wazuh SIEM Lab – Windows & Linux Attack Detection (Flagship)
+🛡️ Project 29: Wazuh SIEM Lab – Windows & Linux Attack Detection (Flagship Project)
 
 Built a SOC-style SIEM lab on a bare-metal Ubuntu server using Wazuh. 
 Integrated Windows and Linux endpoints over a secure Tailscale VPN and simulated brute-force login attacks. 

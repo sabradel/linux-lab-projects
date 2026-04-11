@@ -1,5 +1,7 @@
 # 🛡️ Wazuh SIEM Lab – Windows & Linux Attack Detection
 
+> SOC-focused SIEM lab demonstrating real-time attack detection across Windows and Linux endpoints using Wazuh.
+
 ---
 
 ## 📌 Overview
@@ -39,63 +41,9 @@ The lab monitors both Linux and Windows endpoints and detects security events in
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ SIEM Deployment (Wazuh Installation)
 
 ### Download Wazuh
 
-![Download Wazuh](screenshots/01-download-wazuh.png)
-
----
-
-### Start Installation
-
-![Install Start](screenshots/02-install-start.png)
-
----
-
-### Installation Progress
-
-![Install Progress](screenshots/03-install-progress.png)
-
----
-
-### Wazuh Login
-
-![Wazuh Login](screenshots/04-wazuh-login.png)
-
----
-
-### Wazuh Dashboard
-
-![Wazuh Dashboard](screenshots/05-wazuh-dashboard.png)
-
----
-
-## 🌐 Secure Connectivity (Tailscale)
-
-### Install Tailscale
-
-![Tailscale Install](screenshots/06-tailscale-install.png)
-
----
-
-### Devices Connected
-
-![Tailscale Devices](screenshots/07-tailscale-devices.png)
-
----
-
-### Connectivity Test
-
-![Tailscale Connectivity](screenshots/08-tailscale-connectivity.png)
-
----
-
-## 🎯 Attack Simulation
-
-### Scenario: Failed Login Attack (Brute Force)
-
-A brute-force login attempt was simulated on Windows using:
-
-```powershell
-runas /user:administrator cmd
+```bash
+curl -sO https://packages.wazuh.com/4.x/wazuh-install.sh

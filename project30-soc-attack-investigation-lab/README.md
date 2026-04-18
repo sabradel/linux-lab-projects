@@ -72,3 +72,27 @@ A detailed review of the authentication logs shows the sequence of attacker acti
 #### Evidence
 
 ![Attack Timeline](screenshots/07-attack-timeline.png)
+
+### SOC Analyst Conclusion
+
+During this investigation, a brute-force attack was identified targeting the Wazuh server via SSH.
+
+The attacker, originating from IP `100.114.38.83` (Kali Linux over Tailscale), performed multiple failed login attempts using different usernames such as `fakeuser` and `admin`. This behavior is consistent with credential guessing techniques.
+
+The logs show that the attacker also successfully authenticated using a valid account (`adel`) before continuing further attempts. This indicates a potential risk of unauthorized access and lateral movement within the environment.
+
+Fail2Ban responded by temporarily blocking the attacker IP after repeated failures, demonstrating effective automated defense mechanisms.
+
+Based on the observed activity, this event can be classified as a **brute-force and credential abuse attempt**, potentially leading to unauthorized access if not mitigated.
+
+### Recommendations
+
+- Disable password authentication and enforce SSH key-based login
+- Implement multi-factor authentication (MFA)
+- Monitor repeated login attempts across all systems
+- Strengthen password policies
+- Regularly review authentication logs and SIEM alerts
+
+#### Evidence
+
+![SOC Conclusion](screenshots/08-soc-analyst-conclusion.png)

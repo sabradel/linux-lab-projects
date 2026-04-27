@@ -96,3 +96,22 @@ Based on the observed activity, this event can be classified as a **brute-force 
 #### Evidence
 
 ![SOC Conclusion](screenshots/08-soc-analyst-conclusion.png)
+
+
+## Scenario 2: SSH Attack on Monitored Endpoint (file01)
+
+### Goal
+Simulate an SSH attack from Kali Linux against a monitored endpoint (file01) and detect the activity through Wazuh SIEM.
+
+### Attacker
+- Kali Linux
+- Tailscale IP: `100.114.38.83`
+
+### Target
+- file01 Linux server
+- Tailscale IP: `100.120.60.48`
+
+### Expected Detection
+- Failed SSH login attempts on file01
+- Wazuh alerts showing authentication failures
+- Identification of attacker IP in SIEM logs

@@ -98,20 +98,34 @@ Based on the observed activity, this event can be classified as a **brute-force 
 ![SOC Conclusion](screenshots/08-soc-analyst-conclusion.png)
 
 
-## Scenario 2: SSH Attack on Monitored Endpoint (file01)
+## Scenario 2: SSH Brute-Force Attempt Against file01 (Lateral Movement Simulation)
 
 ### Goal
-Simulate an SSH attack from Kali Linux against a monitored endpoint (file01) and detect the activity through Wazuh SIEM.
+Simulate an attacker attempting to access another Linux system (file01) after initial access, representing lateral movement.
 
 ### Attacker
 - Kali Linux
 - Tailscale IP: `100.114.38.83`
 
 ### Target
-- file01 Linux server
+- file01 (Linux endpoint)
 - Tailscale IP: `100.120.60.48`
 
 ### Expected Detection
-- Failed SSH login attempts on file01
-- Wazuh alerts showing authentication failures
-- Identification of attacker IP in SIEM logs
+- Multiple failed SSH login attempts
+- Attempts using invalid usernames
+- Wazuh alerts triggered for authentication failures
+
+### Log Analysis (Wazuh Detection)
+
+The attack was detected by Wazuh through multiple authentication failure events originating from the attacker IP.
+
+#### Key Findings
+- Multiple failed login attempts within a short timeframe
+- Use of non-existent usernames (`fakeuser`)
+- Source IP: `100.114.38.83`
+- Target system: `file01`
+
+#### Evidence
+
+![Wazuh File01 Detection](screenshots/12-wazuh-file01-detection.png)

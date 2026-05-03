@@ -9,6 +9,12 @@ Welcome! This repository contains step-by-step Linux system administration, cybe
 
 🔥 Featured Resume Projects (Start Here)
 
+🔥 Project 30: SOC Attack Investigation Lab – End-to-End Detection & Response (Featured Project)
+
+Built a SOC-style investigation lab using Wazuh SIEM to simulate and detect SSH brute-force attacks and lateral movement across Linux endpoints over Tailscale.
+
+👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project30-soc-attack-investigation-lab
+
 🛡️ Project 29: Wazuh SIEM Lab – Windows & Linux Attack Detection (Flagship Project)
 
 Built a SOC-style SIEM lab on a bare-metal Ubuntu server using Wazuh. 

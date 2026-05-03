@@ -68,7 +68,7 @@ Built a physical Ubuntu server with static IP, SSH access, and logging capabilit
 - [Project 27: Secure Remote SSH Access from Anywhere (Tailscale VPN)](project27-remote-access-tailscale-ssh)
 - [Project 28: Helpdesk Active Directory Lab – Users, Groups, Shared Drives & GPO Automation](project28-ad-gpo-drive-mapping/)
 - [Project 29: Wazuh SIEM Lab – Windows & Linux Attack Detection](project29-baremetal-wazuh-soc-lab)
-
+- [Project 30: SOC Attack Investigation Lab (End-to-End Detection & Response)](project30-soc-attack-investigation-lab)
 
 
 ## ⚡ Key Skills Highlighted

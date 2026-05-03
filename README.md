@@ -4,6 +4,7 @@
 **Junior Linux System Administrator / SOC Analyst (Blue Team) / IT Support (Linux-focused)**
 
 **What I can do:** Build and secure Linux systems, deploy SIEM (Wazuh), monitor logs, detect real-world attacks, and investigate security events across Windows and Linux environments.
+Focused on hands-on detection, log analysis, and incident investigation using real attack simulations.
 
 Welcome! This repository contains step-by-step Linux system administration, cybersecurity, and SOC/blue team labs.
 
@@ -11,7 +12,7 @@ Welcome! This repository contains step-by-step Linux system administration, cybe
 
 🔥 Project 30: SOC Attack Investigation Lab – End-to-End Detection & Response (Featured Project)
 
-Built a SOC-style investigation lab using Wazuh SIEM to simulate and detect SSH brute-force attacks and lateral movement across Linux endpoints over Tailscale.
+Built a SOC-style investigation lab using Wazuh SIEM to simulate and investigate SSH brute-force attacks and lateral movement across Linux endpoints. Analyzed authentication logs and correlated Wazuh alerts to identify attacker behavior and validate detection pipelines.
 
 👉 View Project: https://github.com/sabradel/linux-lab-projects/tree/main/project30-soc-attack-investigation-lab
 
